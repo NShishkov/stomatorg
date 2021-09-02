@@ -1,0 +1,280 @@
+.aboutindex
+    color: #000;
+    margin-bottom: 90px
+    padding-top: 70px
+    &__img
+        max-width: 100%
+    &__btn
+        font-size: 15px !important
+        margin-top: 15px
+    p
+        line-height: 140%
+        margin-bottom: 15px
+        font-size: 15px
+
+.about
+    &-top
+        min-height: 400px
+        padding-top: 50px 
+        padding-left: 40px
+        padding-bottom: 60px
+        background-image: url('../images/dist/about/about_bg.jpg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        margin-bottom: 80px
+        &-wrap
+            max-width: 430px
+            &__title
+            &__text
+                font-size: 14px
+                line-height: 140%
+    &-sect
+        margin-bottom: 70px
+        iframe
+            max-width: 100%
+        span.accent
+            color: $accent
+        .info
+            margin-top: 7px
+            font-weight: normal
+            &__content
+                p
+                    margin-bottom: 15px
+                    font-weight: normal
+                &_left
+                    padding-right: 25px
+                &_right
+                    padding-left: 25px 
+
+
+    &-advantages
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &__title
+            width: 100%
+            margin-bottom: 40px
+            font-weight: 500
+            font-size: 18px
+            color: #000
+            
+        &-item
+            max-width: 390px
+            margin-bottom: 50px
+            &:hover
+                color: #222
+            &-head
+                display: flex
+                align-items: center
+                margin-bottom: 10px
+                &__img
+                    margin-right: 30px
+                &__title
+                    font-size: 15px
+                    font-weight: 500
+                    color: #222
+                    line-height: 115%
+                    transition: .3s color
+            &:hover
+                .about-advantages-item__body
+                    color: #222
+
+            &__body
+                font-size: 14px
+                line-height: 140%
+                font-weight: 300
+
+    &-quotes
+        background-color: #f2f2f2
+        font-size: 18px
+        line-height: 140%
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        height: 100px
+        font-weight: 500
+        margin-bottom: 80px
+        position: relative
+        &::after
+            position: absolute
+            content: ''
+            width: 80px
+            height: 80px
+            background-image: url(../images/dist/about/quotes_top.svg)
+            right: 135px
+            top: -25px
+            background-size: contain
+            background-position: center 
+        &::before
+            position: absolute
+            content: ''
+            width: 80px
+            height: 80px
+            background-image: url(../images/dist/about/quotes_bot.svg)
+            left: 135px
+            bottom: -25px
+            background-size: contain
+            background-position: center 
+
+@media (max-width: 1639.98px)
+    .about
+        &-sect
+            .info__content
+                &_left
+                    padding-right: 10px
+                &_right
+                    padding-left: 10px
+                
+        &-advantages-item
+            max-width: 300px
+
+
+
+@media (max-width: 1299.98px)
+    .aboutindex
+        margin-bottom: 40px
+        p
+            font-size: 15px
+            line-height: 120%
+
+    .about
+        &-top
+            z-index: 1
+            padding-top: 20px
+            padding-left: 20px
+            padding-bottom: 10px
+            min-height: 310px
+            position: relative
+            margin-bottom: 50px
+            &-wrap
+                max-width: 450px
+            &::before
+                position: absolute
+                content: '' 
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(255,255,255,.7)
+                z-index: -1
+            &-wrap
+                &__title
+                    // font-size: 12px
+
+        &-sect
+            &__iframe
+                display: flex
+                justify-content: center
+                margin-bottom: 25px
+        
+        &-quotes
+            height: 36px
+            font-size: 15px
+            &::before
+                width: 40px
+                height: 40px
+                left: 5px
+                bottom: -17px
+            &::after
+                width: 40px
+                height: 40px
+                right: 5px
+                top: -17px
+                
+
+@media (max-width: 991.98px)
+    .aboutindex
+        padding-top: 25px
+        margin-bottom: 40px
+        p
+            font-size: 10px
+            line-height: 120%
+            br
+                display: none
+
+    .about
+        &-advantages
+            &__title
+                font-size: 12px
+                margin-bottom: 15px
+            &-item
+                max-width: 245px 
+                margin-bottom: 20px
+                &-head
+                    &__img
+                        margin-right: 15px
+                        max-height: 30px
+                    &__title
+                        font-size: 12px
+                &__body
+                    font-size: 12px
+        &-top
+            min-height: 160px
+            margin-bottom: 30px
+            &::before
+                display: none
+            &-wrap
+                &__title
+                    font-size: 12px
+                    max-width: 270px
+                &__text
+                    font-size: 10px
+                    max-width: 220px
+                    margin-bottom: 0
+                    &:last-child
+                        display: none
+        &-sect
+            margin-bottom: 30px
+            iframe
+                width: 330px
+                height: 185px
+
+            .info
+                p
+                    font-size: 12px
+        
+        &-quotes
+            font-size: 12px
+            margin-bottom: 40px
+
+@media (max-width: 767.98px)
+    .about
+        &-sect 
+            iframe
+                width: 400px
+                height: 220px
+        &-advantages
+            &-item
+                max-width: 320px
+                
+@media (max-width: 575.98px)
+    .about
+        &-top
+            padding-left: 5px
+            padding-top: 15px
+            margin-bottom: 15px
+            &::before
+                display: block
+            &__title
+                margin-bottom: 5px
+            &-wrap
+                &__text
+                    max-width: 250px
+        &-advantages
+            &-item
+                margin-bottom: 10px
+
+        &-quotes
+            font-size: 9px
+            &::before
+                width: 20px
+                height: 20px
+                left: 0px
+                bottom: -10px
+            &::after
+                width: 20px
+                height: 20px
+                right: 0
+                top: -10px

@@ -1,0 +1,199 @@
+<!--#set var="title" value="Шаг 1. Товары в подписке" -->
+<!--#include virtual="/parts/header.html" -->
+
+
+
+<div class="container">
+    <div class="row">
+        <!-- BREADCRUMBS -->
+        <div class="col-12">
+            <ul id="breadcrumbs" class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item"
+                        href="/" title="Главная"><span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item"
+                        href="#" title="Скайлеры"><span itemprop="name">Доставка</span></a>
+                    <meta itemprop="position" content="5">
+                </li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <h1>Редактировать подписку</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-xl-2 d-none d-md-block">
+            <div class="catalog-sidebar_small">
+                <!-- LEFT MENU -->
+                <nav class="left-menu">
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li class="active"><a href="#">Доставка</a></li>
+                        <li><a href="#">Производители</a></li>
+                        <li><a href="#">Прайс-лист</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>  
+                <!-- LEFT MENU END-->
+
+                <!--  LEFT MENU GRAY-->
+                <nav class="left-menu left-menu_gray">
+                    <ul>
+                        <li><a href="#">Задать вопрос</a></li>
+                        <li><a href="#">Оставить отзыв</a></li>
+                    </ul>
+                </nav> 
+                <!--  LEFT MENU GRAY END-->
+            </div>
+        </div>
+
+
+        <div class="col-md-9 col-lg-9 col-xl-10"> 
+            
+            <div class="subscription">
+
+                <div class="subscription-steps">
+                    <div class="subscription-steps-item active">
+                        <div class="subscription-steps-item__num">
+                            1
+                        </div>
+                        <div class="subscription-steps-item__name">
+                            Шаг 1. Товары в подписке
+                        </div>
+                    </div>
+
+                    <div class="subscription-steps-item">
+                        <div class="subscription-steps-item__num">
+                            2
+                        </div>
+                        <div class="subscription-steps-item__name">
+                            Шаг 2. Доставка и оплата
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subscription-field subscription-field_title">
+                    <div class="subscription-field__block">
+                        <input type="text" readonly="readonly" placeholder="Название подписки" class="subscription-field__input" value="Расходные материалы"> 
+                        <div class="subscription-field__edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subscription-items">
+
+                    <div class="subscription-items-item">
+
+                        <div class="subscription-items-item__img">
+                            <img src="./images/dist/subscription/subscription1.jpg" alt="Бинокуляры PeriOptix, TTL м.р.инд 4.0 х,(S 30-38,R 39-45,L46-53,XL 54-60),
+                        PERIVISTA">
+                        </div>
+                        
+                    
+
+                        <div class="subscription-items-item-info">
+                            <a href="#" class="subscription-items-item-info__title">Бинокуляры PeriOptix, TTL м.р.инд 4.0 х,(S 30-38,R 39-45,L46-53,XL 54-60),
+                                PERIVISTA</a>
+                            <div class="subscription-items-item-info-bot">
+                                <div class="subscription-items-item-info-bot__code">
+                                    <span>Код: </span>100798
+                                </div>
+                                <div class="subscription-items-item-info-bot__availabolity">
+                                    <span class="marker green"></span>В наличии
+                                </div>   
+                            </div>
+                        </div>
+
+                        <div class="subscription-items-item-price d-none d-lg-block">
+                            <div class="subscription-items-item-price__oldprice">
+                                1 132 000 руб.
+                            </div>
+                            <div class="subscription-items-item-price__curprice">
+                                1 115 800 руб.
+                            </div>
+                        </div>
+
+                        <div class="subscription-items-item-count">
+
+                            <!-- price mobile -->
+                            <div class="subscription-items-item-count-price d-lg-none">
+                                <div class="subscription-items-item-price__oldprice">
+                                    1 132 000 руб.
+                                </div>
+                                <div class="subscription-items-item-price__curprice">
+                                    1 115 800 руб.
+                                </div>
+                            </div>
+                            
+                            <!-- price mobile end -->
+                            
+                            <div class="basket-item-block-amount">
+                                <span class="basket-item-amount-btn-minus" onclick="setQuantity(1417017, 1, 'down', false);"></span>
+                                <div class="basket-item-amount-filed-block">
+                                    <input class="basket-item-amount-filed js-quantity" type="text" id="QUANTITY_INPUT_1417017" name="QUANTITY_INPUT_1417017" value="5" data-ratio="1" onchange="updateQuantity('QUANTITY_INPUT_1417017', '1417017', 1, false)">
+                                    <input type="hidden" id="QUANTITY_1417017" name="QUANTITY_1417017" value="5">
+                                </div>
+                                <span class="basket-item-amount-btn-plus" onclick="setQuantity(1417017, 1, 'up', false);"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription-items-item-actions">
+                            <a href="#" class="subscription-items-item-actions__delete">
+                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-none d-lg-block">
+                                <img src="./images/dist/icons/close_gray.svg" alt="delete" class="d-flex d-lg-none">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="subscription-items-item">
+
+                        <a href='#' class="subscription-items-item__img">
+                            <img src="./images/dist/subscription/add.svg" alt="Добавить товар" class="subscription-items-item__img_add">
+                        </a>
+                        
+                    
+
+                        <div class="subscription-items-item-info">
+                            <a href="#" class="subscription-items-item-info__title">Добавить товар</a>
+                            <p class="subscription-items-item-info__text">При добавлении нового товара и изменении количества товаров будет необходимо обновить параметры доставки</p>
+                        </div>
+
+                       
+
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="subscription-buttons">
+                    <a href="#" class="btn btn_gray">Отменить</a>
+                    <a href="#" class="btn">Далее</a>
+                </div>
+
+                
+
+              
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--#include virtual="/parts/footer.html" -->

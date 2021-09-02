@@ -1,0 +1,80 @@
+.advantages
+    color: #000 
+    margin-bottom: 95px
+    &-item
+        text-align: center
+        display: block
+        &__img
+            margin-bottom: 20px
+            height: 60px
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: .3s transform
+            img
+                max-height: 100%
+            &.animated
+                animation: jump 1s
+        &__title
+            font-size: 18px
+            font-weight: 500
+            line-height: 120%
+            margin-bottom: 15px
+        &__subtitle
+            font-size: 15px
+            line-height: 145%
+        &:hover
+            text-decoration: none
+            color: inherit
+            
+
+@keyframes jump 
+    0% 
+      transform: translateY(0)
+      animation-timing-function: ease-out
+    
+    17% 
+      transform: translateY(-15px)
+      animation-timing-function: ease-in
+    
+    34% 
+      transform: translateY(0)
+      animation-timing-function: ease-out
+    
+    51% 
+      transform: translateY(-8px)
+      animation-timing-function: ease-in
+    
+    68% 
+      transform: translateY(0)
+       
+    85% 
+      transform: translateY(-3px)
+      animation-timing-function: ease-in
+    
+    100% 
+      transform: translateY(0)
+    
+
+
+@media (max-width: 1299.98px)
+  .advantages-item__subtitle
+    font-size: 12px
+    br
+      display: none
+
+@media (max-width: 991.98px)
+  .advantages
+    margin-bottom: 40px
+  .advantages-item__title
+    font-size: 12px
+    margin-bottom: 5px
+
+@media (max-width: 767.98px)
+  .advantages
+    margin-top: 25px
+    margin-bottom: 0
+    &-item
+      margin-bottom: 25px
+      &__subtitle
+        font-size: 10px

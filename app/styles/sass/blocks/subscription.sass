@@ -1,0 +1,682 @@
+.subscription
+    &-wrapper
+        display: flex
+        align-items: center
+        .subscription-field__select
+            margin-right: 30px
+        p
+            margin-bottom: 20px
+            color: #7D7D7D
+            line-height: 130%
+            span
+                font-weight: 500
+    &-form
+        max-width: 1130px
+        &-input
+            &-wrapper
+                margin-left: -30px
+                margin-right: -30px
+                display: flex
+                flex-wrap: wrap
+                .subscription-field
+                    margin-left: 30px
+                    margin-right: 30px
+                    width: calc(50% - 60px)
+
+        &-block
+            margin-bottom: 10px
+            &__title
+                width: 100%
+                display: flex
+                align-items: center
+                font-weight: 500
+                color: #222
+                margin-bottom: 15px
+                img
+                    margin-right: 12px
+
+    &-field
+        width: 33.33%
+        border-bottom: 1px solid #dedede
+        margin-bottom: 30px
+        margin-bottom: 20px
+        &__label
+            font-size: 13px
+            color: #7D7D7D
+            margin-bottom: 4px
+
+        &_title
+            input
+                color: $accent
+                font-size: 18px
+                font-weight: 500
+
+        &__block
+            display: flex
+            align-items: center
+            &.date
+                position: relative
+                display: inline-flex
+        &__date
+            border: 1px solid #DEDEDE
+            border-radius: 4px
+            height: 36px
+            padding-right: 35px
+            padding-left: 13px
+            min-width: 270px
+            margin-bottom: 20px
+        &__calendar
+            position: absolute
+            right: 15px
+            margin-top: -20px
+            cursor: pointer
+        &__input
+            width: 100%
+            border: none
+            padding: 4px 12px 9px 0
+            &:focus
+                + .subscription-field__edit
+                    svg
+                        fill: $accent
+        &__select
+            min-width: 270px
+            margin-bottom: 20px
+            background-image: url(../images/dist/icons/carret_black.svg)
+            background-repeat: no-repeat
+            background-size: 10px
+            background-position: right 15px top 50%
+            &:focus
+                outline: none
+            &.blue
+                background-color: $accent
+                border: 1px solid $accent
+                color: #fff
+                background-image: url(../images/dist/icons/carret_white.svg)
+                option
+                    background-color: #fff
+                    color: #222
+            height: 36px
+            border-radius: 4px
+            border: 1px solid #DEDEDE
+            padding-left: 13px
+            padding-right: 35px
+            appearance: none
+            
+
+        &__edit
+            svg
+                fill: #C0C0C0
+            &:hover
+                cursor: pointer
+                svg
+                    fill: $accent
+    &-steps
+        margin-bottom: 30px
+        &-item
+            color: #C0C0C0
+            font-size: 15px
+            margin-right: 35px
+            display: inline-flex
+            align-items: center
+            flex-wrap: wrap
+            &:last-child
+                margin-right: 0
+            &__num
+                background-color: #C0C0C0
+                height: 21px
+                width: 21px
+                margin-right: 9px
+                border-radius: 50%
+                color: #fff
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                font-size: 13px
+                line-height: 13px
+            &__name
+                font-weight: 500
+                line-height: 130%
+
+            &.active
+                .subscription-steps-item
+                    &__num
+                        background-color: $accent
+                    &__name
+                        color: $accent
+
+    &-buttons
+        margin-left: -10px
+        margin-right: -10px
+        a
+            margin: 0 10px
+            min-width: 170px
+
+
+
+    &__title
+        margin-bottom: 35px 
+
+    &-items
+        margin-bottom: 25px
+        &-item
+            position: relative
+            width: 100%
+            padding-left: 20px
+            padding-right: 20px
+            padding-bottom: 10px
+            padding-top: 10px
+            display: flex
+            align-items: center
+            border: 1px solid #E1E1E1
+            margin-top: -1px
+            &__img
+                height: 120px
+                width: 120px
+                display: flex
+                align-items: center
+                justify-content: center
+                margin-right: 55px
+                img
+                    max-width: 100%
+                &_add
+                    width: 70px
+                    height: auto
+            &-info
+                width: 570px
+                margin-right: 110px
+                &__title
+                    font-weight: 500
+                    line-height: 20px
+                    font-size: 15px
+                    margin-bottom: 12px
+                    display: block
+                &-bot
+                    display: flex
+                    font-size: 13px
+                    &__code
+                        margin-right: 30px
+                &__text
+                    color: #7D7D7D
+                    font-weight: 300
+                    line-height: 130%
+
+            &-price
+                width: 130px
+                margin-right: 70px
+                
+                &__oldprice
+                    font-size: 12px
+                    line-height: 120%
+                    font-weight: 300
+                    color: #4B4B4B
+                    margin-bottom: 5px
+                    text-decoration-line: line-through
+                    + .subscription-items-item-price__curprice
+                        color: $red
+                &__curprice
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 120%
+            
+            &-count
+                margin-right: 90px
+
+    &-delivery
+        &-select
+            margin-left: -10px
+            margin-right: -10px
+            margin-bottom: 30px
+            &__item
+                display: inline-flex
+                height: 44px
+                border-radius: 4px
+                padding-left: 20px
+                padding-right: 20px
+                align-items: center
+                justify-content: center
+                background-color: $gray
+                margin: 0 10px
+                font-weight: 500
+                img
+                    margin-right: 12px
+                &.active
+                    color: #fff
+                    background-color: $accent
+
+
+    &-item
+        position: relative
+        border: 1px solid #E1E1E1
+        margin-top: -1px
+        padding-top: 20px
+        padding-right: 30px
+        padding-bottom: 20px    
+        padding-left: 20px
+        display: flex
+        &.disable
+            .subscription-item-body-top__title,.subscription-item-body-top-info,.subscription-item-body-list,.subscription-item-body-list-items-item,.subscription-item-body-top-price__curprice,.subscription-item-body-top-price__oldprice
+                color: #7D7D7D
+
+        &__delete
+            position: absolute
+            top: 15px
+            right: 15px
+            width: 14px 
+            height: 14px 
+            display: block
+            line-height: 14px
+            img
+                width: 100%
+                height: auto
+        &-left
+            margin-right: 60px
+            display: flex
+            flex-direction: column
+            &__img
+                width: 100px
+                height: 100px
+                object-fit: contain
+                margin-bottom: 5px
+            &__count
+                color: #fff
+                height: 24px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                font-size: 13px
+                line-height: 15px
+                padding-left: 7px
+                padding-right: 7px
+                background: #6DA3CD
+                border-radius: 4px
+                max-width: 100%
+        &-body
+            &-top
+                display: flex
+                align-items: center
+                flex-wrap: wrap
+                &__title
+                    flex-basis: 100%
+                    font-size: 15px
+                    color: $accent
+                    font-weight: 500
+                    line-height: 20px
+                    margin-bottom: 5px
+                &-info
+                    font-weight: 300
+                    width: 625px 
+                    padding-right: 10px
+                    span
+                        font-weight: 500
+
+                &-wrapper
+                    display: flex
+                    &.mobile
+                        display: none
+
+                &-price
+                    width: 320px
+                    padding-right: 10px
+                    &__oldprice
+                        font-size: 12px
+                        line-height: 120%
+                        color: #4B4B4B
+                        margin-bottom: 5px
+                        text-decoration-line: line-through
+                        + .subscription-item-body-top-price__curprice
+                            color: $red
+                    &__curprice
+                        color: #222222
+                        font-size: 18px
+                        line-height: 120%
+                        font-weight: 500
+                &-buttons
+                    width: 150px
+                    a
+                        height: 32px
+                        border-radius: 4px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        font-weight: 500
+                        margin-bottom: 10px
+                        &:last-child
+                            margin-bottom: 0
+                    &_blue
+                        background-color: $accent
+                        color: #fff
+                        &:hover
+                            color: #fff
+                            background-color: $accent2
+                    &_gray
+                        color: #222222
+                        background-color: #F2F2F2
+
+            &-list
+                &__title
+                    padding-left: 15px
+                    background-image: url(../images/dist/icons/carret_black.svg)
+                    background-repeat: no-repeat
+                    background-size: 10px
+                    background-position: left center
+                    cursor: pointer
+                    &.active
+                        margin-bottom: 10px
+                        background-image: url(../images/dist/icons/carret_black_reverse.svg)
+                        + .subscription-item-body-list-items
+                            max-height: 1000px
+                            opacity: 1
+                            visibility: visible
+
+                &-items
+                    padding-left: 15px
+                    opacity: 0
+                    visibility: hidden
+                    max-height: 0px
+                    transition: .3s opacity, .3s max-height, .3s visibility
+                    &-item
+                        display: flex
+                        font-size: 14px
+                        margin-bottom: 5px
+                        &__name
+                            width: 930px
+
+
+@media (max-width: 1639.98px)
+    .subscription
+        &-items
+            &-item
+                &__img
+                    margin-right: 20px
+                &-info
+                    margin-right: 40px
+                    width: 415px
+        &-field
+
+@media (max-width: 1300px)
+    .subscription
+        &-field
+            &_title
+                width: 50%
+        &-items
+            &-item
+                &__img
+                    margin-right: 20px
+                &-info
+                    margin-right: 20px
+                    width: 240px
+                &-price
+                    margin-right: 20px
+                &-count
+                    margin-right: 20px
+
+        
+        &-item
+            padding-top: 10px
+            padding-right: 23px
+            padding-bottom: 15px
+            padding-left: 15px
+            &__delete
+                width: 10px
+                height: 10px
+                top: 10px 
+                right: 10px
+            &-left
+                margin-right: 20px
+                &__img
+                    width: 85px
+                    height: 85px
+                &__count
+                    font-size: 10px
+                    height: 17px
+                    padding-left: 3px
+                    padding-right: 3px
+                    width: 70px
+            &-body
+                max-width: calc(100% - 105px)
+                &-top
+                    align-items: flex-start
+                    &-info
+                        padding-right: 20px
+                        width: 380px
+                        &__period,&__address,&__date
+                            span
+                                display: block
+                                margin-bottom: 5px
+                    &-price
+                        width: 175px
+                        margin-bottom: 20px
+                        padding-right: 0
+                    &-wrapper
+                        flex-direction: column
+                &-list
+                    &-items
+                        &-item
+                            &__name
+                                width: 440px
+                                padding-right: 30px
+
+@media (max-width: 991.98px)
+    .subscription          
+        &-items
+            &-item
+                padding-top: 13px
+                padding-left: 7px
+                padding-right: 10px
+
+                &-actions
+                    position: absolute
+                    right: 10px
+                    top: 10px
+
+                &-price
+                    &__oldprice
+                        font-size: 10px
+                        margin-bottom: 0
+                    &__curprice
+                        font-size: 15px
+
+
+
+                &__img
+                    margin-right: 20px
+                    width: 60px
+                    height: 60px
+                &-info
+                    margin-right: 20px
+                    width: 290px
+                    &__title
+                        font-size: 12px
+                        margin-bottom: 5px
+                        line-height: 140%
+                &-count
+                    margin-right: 10px
+
+                .basket-item-block-amount
+                    margin-top: 8px
+
+        &__title
+            margin-bottom: 20px
+        &-item
+            &-body
+                &-top
+                    font-size: 10px
+                    &__title
+                        line-height: 20px
+                    &-info
+                        width: 240px
+                        &__period,&__address,&__date
+                            span
+                                font-size: 12px
+                    &-price
+                        width: 135px
+                        margin-bottom: 10px
+                        &__oldprice
+                            font-size: 10px
+                        &__curprice
+                            font-size: 16px
+                    &-buttons
+                        width: 135px
+                        a
+                            height: 23px
+                &-list
+                    margin-left: -105px
+                    width: calc(100% + 105px)
+                    &__title
+                        font-size: 12px
+                    &-items
+                        &-item
+                            font-size: 10px
+
+
+@media (max-width: 767.98px)
+    .subscription
+        &-field
+            &__input
+                font-size: 12px
+            &__select
+                font-size: 12px
+            &__date
+                font-size: 12px
+
+        &-delivery-select
+            display: flex
+            margin-bottom: 10px
+            &__item
+                padding-left: 5px
+                padding-right: 5px
+                width: 140px
+                height: 30px
+                font-size: 12px
+                img
+                    display: none
+        
+        &-wrapper
+            flex-wrap: wrap
+            .subscription-field__select
+                margin-bottom: 7px
+        
+        &-buttons
+            a
+                min-width: auto
+                width: 100px
+                height: 30px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+
+        &-form
+            &-block
+                &__title
+                    font-size: 12px
+                    margin-bottom: 10px
+            &-input
+                &-wrapper
+                    margin-left: 0
+                    margin-right: 0
+                    .subscription-field
+                        width: 100%
+                        margin-left: 0
+                        margin-right: 0                    
+
+
+        &__title
+            margin-bottom: 15px
+
+        &-steps
+            margin-bottom: 10px
+            &-item
+                font-size: 10px
+                margin-right: 20px
+                &__num
+                    display: none
+
+        &-items
+            &-item
+                flex-wrap: wrap
+                &__img
+                    width: 75px
+                    height: 75px
+                    margin-bottom: 10px
+                &-info
+                    margin-right: 0
+                    margin-bottom: 10px
+                    width: calc(100% - 95px)
+                    &__title
+                        font-size: 10px
+                        line-height: 120%
+                    &-bot
+                        font-size: 10px
+                &-count
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    .basket-item-block-amount
+                        order: -1
+                        margin-top: 0px
+                    &-price
+                        margin-left: 25px
+
+        &-field
+            &_title
+                width: 80%
+                input
+                    font-size: 12px
+        
+
+        &-item
+            flex-wrap: wrap
+            padding-left: 5px
+            padding-right: 15px
+            &__delete
+                right: 7px
+
+
+            &-left
+                margin-right: 10px
+            &-body
+                width: calc(100% - 95px)
+                &-list
+                    width: calc(100% + 110px)
+                    margin-left: -95px
+                    margin-bottom: 10px
+                    &-items
+                        &-item
+                            &__name
+                                width: calc(100% - 40px)
+                &-top
+                    &__title
+                        font-size: 12px
+                    &-info
+                        width: auto
+                        padding-right: 5px
+                        &__period,&__address,&__date
+                            span
+                                font-size: 10px
+                    &-wrapper
+                        display: none
+                        &.mobile
+                            display: flex
+                            flex: 1
+                      
+                    &-price
+                        width: 100%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        &__oldprice
+                            margin-bottom: 0px
+                            margin-right: 20px
+                            font-size: 12px
+                        &__curprice
+                            font-size: 18px
+                    
+                    &-buttons
+                        width: 100%
+                        display: flex
+                        justify-content: center
+                        a
+                            margin: 0px 8px
+                            height: 26px
+                            font-size: 12px
+                            width: 120px

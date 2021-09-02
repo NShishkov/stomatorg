@@ -1,0 +1,148 @@
+.orders
+    &-list
+        &-item
+            border: 1px solid #DEDEDE
+            border-radius: 4px
+            margin-bottom: 10px
+            &-head
+                position: relative
+                background-color: #F2F2F2
+                padding-top: 20px
+                padding-right: 40px
+                padding-bottom: 10px
+                padding-left: 30px
+                background-image: url('../images/dist/orders/left_angle.svg')
+                background-repeat: no-repeat
+                background-position: top left
+                background-size: 25px
+                display: flex
+                justify-content: space-between
+                &-left
+                    display: flex
+                    &__ordernum
+                        margin-right: 35px
+                        font-size: 18px
+                        line-height: 22px
+                        font-weight: 500
+                        color: #222
+                        span
+                            color: $accent
+                            display: block
+                            font-size: 15px
+                            font-weight: normal
+                    &__status
+                        background-color: $blue2_2
+                        padding-left: 20px
+                        padding-right: 20px
+                        font-size: 18px
+                        font-weight: 500
+                        color: #fff
+                        line-height: 18px
+                        border-radius: 4px
+                        height: 26px
+                        display: flex
+                        align-items: center
+                        &.danger
+                            background-color: $red
+                        &.success
+                            background-color: #1F8A70
+                        &.warning
+                            background-color: #869195
+
+                &-right
+                    font-weight: 500
+                    color: #222
+                    font-size: 18px
+                    
+            &-body
+                padding-left: 30px
+                padding-right: 40px
+                padding-bottom: 30px
+                padding-top: 30px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &-info
+                    td:nth-child(1)
+                        font-weight: 300
+                    td:nth-child(2)
+                        padding-left: 16px
+                &-actions
+                    display: flex
+                    justify-content: flex-end
+                    a
+                        margin-right: 5px
+                        &:last-child
+                            margin-right: 0
+
+@media  (max-width: 1299.98px)
+    .orders-list-item
+        &-head
+            padding-left: 10px
+            padding-top: 10px
+            padding-right: 10px
+            padding-bottom: 10px
+        &-body
+            padding-left: 10px
+            padding-right: 10px
+            padding-top: 15px
+            padding-bottom: 15px
+
+    
+@media  (max-width: 991.98px)
+    .orders-list-item
+        &-head
+            &-left
+                &__ordernum
+                    font-size: 12px
+                    line-height: 15px
+                    span
+                        font-size: 10px
+                &__status
+                    font-size: 10px
+                    line-height: 12px
+                    height: 17px
+                    padding-left: 8px
+                    padding-right: 8px
+            
+            &-right
+                font-size: 12px
+        
+        &-body
+            font-size: 10px
+
+
+@media  (max-width: 767.98px)
+    .orders-list-item
+        &-head
+            align-items: flex-start
+            &-left
+                margin-right: 0
+                align-items: flex-start
+                &__ordernum
+                    margin-right: 14px
+                &__status
+                    padding-left: 5px
+                    padding-right: 5px
+        &-body
+            flex-direction: column
+            align-items: flex-start
+            &-info  
+                margin-bottom: 10px
+             
+            &-actions
+                display: flex
+                flex-direction: row-reverse
+                a
+                    margin-right: 5px
+                    &:last-child
+                        margin-right: 5px
+                    &:first-child
+                        margin-right: 0px
+
+@media  (max-width: 360px)
+    .orders-list-item
+        &-head
+            &-left
+                &__status 
+                    font-size: 8px 

@@ -1,0 +1,265 @@
+<!--#set var="title" value="Шаг 2. Товары в подписке" -->
+<!--#include virtual="/parts/header.html" -->
+
+
+
+<div class="container">
+    <div class="row">
+        <!-- BREADCRUMBS -->
+        <div class="col-12">
+            <ul id="breadcrumbs" class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item"
+                        href="/" title="Главная"><span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item"
+                        href="#" title="Скайлеры"><span itemprop="name">Доставка</span></a>
+                    <meta itemprop="position" content="5">
+                </li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <h1>Редактировать подписку</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-xl-2 d-none d-md-block">
+            <div class="catalog-sidebar_small">
+                <!-- LEFT MENU -->
+                <nav class="left-menu">
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li class="active"><a href="#">Доставка</a></li>
+                        <li><a href="#">Производители</a></li>
+                        <li><a href="#">Прайс-лист</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>  
+                <!-- LEFT MENU END-->
+
+                <!--  LEFT MENU GRAY-->
+                <nav class="left-menu left-menu_gray">
+                    <ul>
+                        <li><a href="#">Задать вопрос</a></li>
+                        <li><a href="#">Оставить отзыв</a></li>
+                    </ul>
+                </nav> 
+                <!--  LEFT MENU GRAY END-->
+            </div>
+        </div>
+
+
+        <div class="col-md-9 col-lg-9 col-xl-10"> 
+            
+            <div class="subscription">
+
+                <div class="subscription-steps">
+                    <div class="subscription-steps-item ">
+                        <div class="subscription-steps-item__num">
+                            1
+                        </div>
+                        <div class="subscription-steps-item__name">
+                            Шаг 1. Товары в подписке
+                        </div>
+                    </div>
+
+                    <div class="subscription-steps-item active">
+                        <div class="subscription-steps-item__num">
+                            2
+                        </div>
+                        <div class="subscription-steps-item__name">
+                            Шаг 2. Доставка и оплата
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="subscription__title">
+                    Расходные материалы
+                </h4>
+
+                <div class="subscription-delivery-select">
+                    <div href="#" class="subscription-delivery-select__item active">
+                        <img src="./images/dist/icons/truck_white.svg" alt="Доставка курьером">
+                        Доставка курьером
+                    </div>
+                    <a href="#" class="subscription-delivery-select__item">
+                        <img src="./images/dist/icons/home_blue.svg" alt="Самовывоз">
+                        Самовывоз
+                    </a>
+                </div>
+
+
+                <form action="" class="subscription-form">
+                    <div class="subscription-form-block">
+                        <div class="subscription-form-block__title">
+                            <img src="./images/dist/subscription/home.svg" alt="Адрес доставки">
+                            Адрес доставки:
+                        </div>
+
+                        <div class="subscription-form-input-wrapper">
+                            <div class="subscription-field">
+                                <label class="subscription-field__label">Область, город</label>
+                                <div class="subscription-field__block">
+                                    <input type="text" readonly="readonly" placeholder="Область, город" class="subscription-field__input" value="Московская обл., Москва"> 
+                                    <div class="subscription-field__edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subscription-field">
+                                <label class="subscription-field__label">Получатель</label>
+                                <div class="subscription-field__block">
+                                    <input type="text" readonly="readonly" placeholder="Получатель" class="subscription-field__input" value="Семидетко Екатерина"> 
+                                    <div class="subscription-field__edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subscription-field">
+                                <label class="subscription-field__label">Улица</label>
+                                <div class="subscription-field__block">
+                                    <input type="text" readonly="readonly" placeholder="Улица" class="subscription-field__input" value="Стремянный переулок"> 
+                                    <div class="subscription-field__edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subscription-field">
+                                <label class="subscription-field__label">Телефон</label>
+                                <div class="subscription-field__block">
+                                    <input type="text" readonly="readonly" placeholder="Телефон" class="subscription-field__input" value="8 (903) 156-86-71"> 
+                                    <div class="subscription-field__edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subscription-field">
+                                <label class="subscription-field__label">Дом/ корпус</label>
+                                <div class="subscription-field__block">
+                                    <input type="text" readonly="readonly" placeholder="Дом/ корпус" class="subscription-field__input" value="38, корп. 1"> 
+                                    <div class="subscription-field__edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subscription-field">
+                                <label class="subscription-field__label">E-mail</label>
+                                <div class="subscription-field__block">
+                                    <input type="text" readonly="readonly" placeholder="E-mail" class="subscription-field__input" value="stomatolog@gmail.com"> 
+                                    <div class="subscription-field__edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M8.084 2.17l2.644 2.657-6.694 6.727-2.643-2.658L8.084 2.17zm4.65-.641L11.557.344a1.166 1.166 0 00-1.654 0l-1.13 1.135 2.645 2.657 1.318-1.324a.91.91 0 000-1.283zM.008 12.632a.302.302 0 00.364.36l2.947-.719L.675 9.616l-.668 3.016z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>                        
+                    </div>
+
+                    <div class="subscription-form-block">
+                        <div class="subscription-form-block__title">
+                            <img src="./images/dist/subscription/time.svg" alt="Интервал доставки">
+                            Интервал доставки
+                        </div>
+                        
+                        <select class='subscription-field__select blue' name="" id="">
+                            <option >Выберите интервал доставки</option>
+                            <option value="1">с 10:00 до 14:00</option>
+                            <option value="2">с 14:00 до 16:00</option>
+                            <option value="3">с 16:00 до 18:00</option>
+                        </select>
+                    </div>
+
+                    <div class="subscription-form-block">
+                        <div class="subscription-form-block__title">
+                            <img src="./images/dist/subscription/card.svg" alt="Оплата">
+                            Оплата
+                        </div>
+                        
+                        <select class='subscription-field__select blue' name="" id="">
+                            <option >Выберите способ оплаты</option>
+                            <option value="1">Наличными при получении</option>
+                            <option value="2">Картой онлайн</option>                        
+                        </select>
+                    </div>
+
+                    <div class="subscription-form-block">
+                        <div class="subscription-form-block__title">
+                            <img src="./images/dist/subscription/calendar.svg" alt="Желаемая дата доставки">
+                            Желаемая дата доставки
+                        </div>
+
+                        <!-- Заюзать bx.calendar -->
+                        <div class="subscription-field__block date">
+                            <input type="text"  placeholder="Желаемая дата доставки" class="subscription-field__date"> 
+                            <div class="subscription-field__calendar">
+                                <img src="./images/dist/icons/calendar_gray.svg" alt="Выбрать дату">
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="subscription-form-block">
+                        <div class="subscription-form-block__title">
+                            <img src="./images/dist/subscription/calendar.svg" alt=Периодичность доставки">
+                            Периодичность доставки
+                        </div>
+
+                        <div class="subscription-wrapper">
+                            <select class='subscription-field__select' name="" id="">
+                                <option value="1">Раз в месяц</option>
+                                <option value="2">Раз в неделю</option>                        
+                            </select>
+
+                            <p class="subscription-wrapper__text">
+                                Дата следующей доставки: <br>
+                                <span>Понедельник, 15 июля</span>
+                            </p>
+                        </div>
+                        
+                        
+
+                    </div>
+
+
+                    
+                    
+
+                </form>
+
+
+              
+
+                <div class="subscription-buttons">
+                    <a href="#" class="btn btn_gray">Отменить</a>
+                    <a href="#" class="btn">Сохранить</a>
+                </div>
+
+                
+
+              
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--#include virtual="/parts/footer.html" -->

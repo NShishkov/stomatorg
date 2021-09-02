@@ -19,6 +19,7 @@ const imagemin     = require('gulp-imagemin')
 const newer        = require('gulp-newer')
 const rsync        = require('gulp-rsync')
 const del          = require('del')
+const webp		   = require('gulp-webp')
 
 function browsersync() {
 	browserSync.init({
@@ -50,7 +51,10 @@ function scripts() {
 						}
 					}
 				]
-			}
+			},
+			optimization: {
+				minimize: false
+			},
 		})).on('error', function handleError() {
 			this.emit('end')
 		})
@@ -74,6 +78,13 @@ function images() {
 	return src(['app/images/src/**/*'])
 		.pipe(newer('app/images/dist'))
 		.pipe(imagemin())
+		.pipe(dest('app/images/dist'))
+		.pipe(browserSync.stream())
+}
+
+function webP() {
+	return src(['app/images/src/**/*'])
+		.pipe(webp())
 		.pipe(dest('app/images/dist'))
 		.pipe(browserSync.stream())
 }
@@ -125,6 +136,7 @@ exports.scripts = scripts
 exports.styles  = styles
 exports.images  = images
 exports.deploy  = deploy
+exports.webp    = webP
 exports.assets  = series(scripts, styles, images)
 exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
 exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))

@@ -1,0 +1,178 @@
+<!--#set var="title" value="Стоматорг каталог" -->
+<!--#include virtual="/parts/header.html" -->
+
+
+<link rel="stylesheet" href="style.css">
+<div class="container">
+    <div class="row justify-content-center">
+        <div id="init-merchant" class="col-md-8 merchant">
+            <div>
+                <h1 class="merchant__title">Начнем знакомство</h1>
+                <p class="merchant__text">Чтобы начать сотрудничество, заполните апкету и отправьте нам ваше
+                    коммерческое
+                    предложение.</p>
+                <div class="merchant__prompt">
+                    <p class="merchant__prompt-text"><a href='#'><span><img src="../../images/dist/footer/Youtube.svg" alt="Youtube"></span>
+                        Смотреть видео
+                    </a></p>
+                </div>
+                <form class="merchant-init">
+                    <div class="merchant-init__form-block">
+                        <h2 class="merchant-init__block-title">Информация о юридическои лице</h2>
+                        <div class="merchant-init__form-inputs">
+                            
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">Организационно-правовая форма предприятия</span>
+                                <span class="glyphicon-asterisk"></span>
+                                <input
+                                        placeholder="ООО на общей системе налогообложения(ОСН)" required="required"
+                                        class="merchant-init__input">
+                            </label>
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">ИНН</span>
+                                <span class="glyphicon-asterisk"></span>
+                                <input maxlength="12" placeholder="7704047449"
+                                       required="required" class="merchant-init__input">
+                            </label>
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">Полное наименование юридического лица</span>
+                                <span class="glyphicon-asterisk"></span>
+                                <input maxlength="30" placeholder="ООО &quot;Стоматорг&quot;" required="required"
+                                       class="merchant-init__input">
+                            </label>
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">КПП</span>
+                                <input maxlength="9"
+                                       placeholder="772801001" class="merchant-init__input">
+                            </label>
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">Направление деятельности</span>
+                                <span class="glyphicon-asterisk"></span>
+                                <input placeholder="Дистрибьютор" required="required" class="merchant-init__input">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="merchant-init__form-block">
+                        <h2 class="merchant-init__block-title">Ваш ассортимент</h2>
+                        <div class="merchant-init__form-inputs">
+                            <div class="row merchant-init__wrapper">
+                                <div class="col-xl-6">
+                                    <label class="merchant-init__label">
+                                        <span class="merchant-init__placeholder">Категория товаров</span>
+                                        <span class="glyphicon-asterisk"></span>
+                                        <input placeholder="Инструменты"
+                                               required="required" class="merchant-init__input">
+                                    </label>
+                                    <label class="merchant-init__label">
+                                        <span class="merchant-init__placeholder">Дополнительные категории</span>
+                                        <!-- <input maxlength="30" placeholder=""
+                                               class="merchant-init__input"> -->
+                                        <select name="category" id="category" class="merchant-init__select">
+                                            <option value="1">CAD/CAM</option>
+                                            <option value="2">Имплантология</option>
+                                            <option value="3">Зуботехнические материалы</option>
+                                        </select>
+                                    </label>
+                                    
+                                </div>
+                                <div class="col-xl-6">
+                                    <label class="merchant-init__label">
+                                        <span class="merchant-init__placeholder">Наименование брендов</span>
+                                        <span class="glyphicon-asterisk"></span>
+                                        <textarea required="required" class="merchant-init__input"></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merchant-init__form-block">
+                        <h2 class="merchant-init__block-title">Контакты</h2>
+                        <div class="merchant-init__form-inputs">
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">Контактное лицо</span>
+                                <span class="glyphicon-asterisk"></span>
+                                <input placeholder="Орехова Карина Аветовна"
+                                       required="required"
+                                       class="merchant-init__input">
+                            </label>
+                            <label class="merchant-init__label">
+                                <span class="merchant-init__placeholder">Email</span>
+                                <span class="glyphicon-asterisk"></span>
+                                <input maxlength="30"
+                                       placeholder="k.orehova@stomatorg.ru"
+                                       required="required"
+                                       class="merchant-init__input">
+                            </label>
+                            <label
+                                    class="merchant-init__label"><span
+                                    class="merchant-init__placeholder">Контактный телефон</span> <span
+                                    class="glyphicon-asterisk"></span> <input placeholder="+7 (999) 999 9999"
+                                                                              required="required"
+                                                                              class="merchant-init__input"></label>
+                            <label
+                                    class="merchant-init__label"><span class="merchant-init__placeholder">Адрес
+                                    склада</span> <span class="glyphicon-asterisk"></span> <input maxlength="9"
+                                                                                                  placeholder="108820, г.Москва, Сосенское, деревня Николо-Хованское, 1017с1"
+                                                                                                  required="required"
+                                                                                                  class="merchant-init__input"></label>
+                            <label
+                                    class="merchant-init__label"><span class="merchant-init__placeholder">Юридический
+                                    адрес</span> <span class="glyphicon-asterisk"></span> <input
+                                    placeholder="108820, г.Москва, Сосенское, деревня Николо-Хованское, 1017с1"
+                                    required="required" class="merchant-init__input"></label> <label
+                                class="merchant-init__label"><span class="merchant-init__placeholder">Фактический
+                                    адрес</span> <span class="glyphicon-asterisk"></span> <input
+                                placeholder="108820, г.Москва, Сосенское, деревня Николо-Хованское, 1017с1"
+                                required="required" class="merchant-init__input"></label> <label
+                                class="merchant-init__label"><span class="merchant-init__placeholder">Сайт</span>
+                            <input
+                                    placeholder="https://shop.stomatorg.ru" class="merchant-init__input"></label>
+                        </div>
+                    </div>
+                    <div class="merchant-init__form-block">
+                        <h2 class="merchant-init__block-title">Ваше коммерческое предложение</h2>
+                        
+                        <div class="merchant-init__form-inputs">
+                            <div class="row merchant-init__wrapper">
+                                <div class="col-xl-6">
+                                    <div class="merchant-init__label merchant-init__label--upload merchant-init__label--long">
+                                        <span class="merchant-init__placeholder">Документ правообладания товарным знаком</span>
+                                        <span class="glyphicon-asterisk"></span> <label class="merchant-init__upload"><input
+                                            placeholder="Декларации соответствия и РУ.pdf" required="required"
+                                            class="merchant-init__input"></label>
+                                    </div>
+                                    <div class="merchant-init__label merchant-init__label--upload"><span
+                                        class="merchant-init__placeholder">Коммерческое предложение</span> <span
+                                        class="glyphicon-asterisk"></span> <label class="merchant-init__upload"><input
+                                        placeholder="Коммерческое предложение МП.xls" required="required"
+                                        class="merchant-init__input"></label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <label class="merchant-init__label"><span
+                                        class="merchant-init__placeholder">Комментарий</span>
+                                        <textarea placeholder="Готовы предоставить документы (дистрибьюторский конт акт и т.д.)"
+                                                class="merchant-init__input"></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            
+                            <div>
+                                
+                                <input name="userid"> <input
+                                    type="submit" value="Направить на акцент" class="merchant-init__button">
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!--#include virtual="/parts/footer.html" -->

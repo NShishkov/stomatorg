@@ -1,0 +1,606 @@
+.newheader
+    padding-top: 25px
+    color: #222
+    margin-bottom: 40px
+    &-top
+        padding-bottom: 25px
+        &-menu
+            vertical-align: top
+            margin-bottom: 0
+            padding-left: 0
+            list-style-type: none
+            display: inline-flex
+            max-width: calc(100% - 200px)
+            li
+                margin-right: 25px
+                &:last-child
+                    margin-right: 0
+                &:before
+                    display: none
+            a
+                font-size: 15px
+                line-height: 120%
+                transition: .3s color
+                color: #222
+                &:hover
+                    color: $accent
+                    text-decoration: none
+        &-nav
+            display: flex
+            justify-content: flex-end
+            &__icon
+                margin-right: 2px
+            &__login,&__find
+                margin-right: 40px
+            a
+                color: #222
+                font-size: 15px
+                line-height: 125%
+                transition: .3s color
+                font-weight: normal
+                display: inline-block
+                &:hover
+                    color: $accent
+                    text-decoration: none
+
+    &__location
+        margin-right: 100px
+        display: inline-block
+        line-height: 140%
+        a
+            text-decoration: none
+            display: flex
+            align-items: center
+            font-size: 15px
+            line-height: 24px
+            color: #222
+            img:first-child
+                margin-right: 12px
+            img:last-child
+                margin-left: 6px
+            transition: .3s color
+            &:hover
+                text-decoration: none
+                color: $accent
+
+
+    &-main
+        &__logo
+            display: block
+            img
+                max-width: 100%
+        &-wrapper
+            display: flex
+        &__catalog
+            background-color: $accent
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            width: 170px
+            margin-right: 4px
+            height: 62px
+            border-radius: 4px
+            font-size: 22px
+            font-weight: 600
+            color: #fff
+            line-height: 125%
+            transition: .3s background-color
+            img
+                height: 20px
+                width: 20px
+                margin-right: 10px
+            &:hover,&:focus
+                color: #fff
+                text-decoration: none
+                background-color: #00AECE
+            
+        &-search
+            border: 1px solid #00B5D3
+            box-sizing: border-box
+            border-radius: 4px
+            display: inline-flex
+            flex-grow: 1
+            form
+                width: 100%
+                position: relative
+            input[type='text']
+                padding-left: 25px
+                width: calc(100% - 52px)
+                height: 100%
+                border: none
+                background-color: #fff
+                border-radius: 4px
+            button,input[type='submit']
+                height: calc(100% - 4px)
+                background-color: #fff
+                width: 52px
+                position: absolute
+                right: 1px
+                top: 1px
+                border: none
+                border-radius: 4px
+                
+    &-contacts
+        &__phone
+            margin-bottom: 6px
+            z-index: 99
+            width: 100%
+            padding-left: 18px
+            text-align: center
+            background-color: #fff
+            position: relative
+            >a
+                color: #222
+                line-height: 125%
+                font-weight: bold
+                font-size: 21.5px
+                vertical-align: middle
+                transition: .3s
+                &:hover
+                    color: $accent
+                    text-decoration: none
+            &_caret
+                vertical-align: middle
+                margin-bottom: 0
+                width: 12px
+                cursor: pointer
+                transition: .5s transform
+                margin-left: 5px
+                &.active
+                    transform: rotate(180deg)
+        &__feedback
+            margin-left: 18px
+            background-color: $accent
+            color: #fff
+            height: 30px
+            line-height: 30px
+            display: block
+            border-radius: 4px
+            text-align: center
+            transition: .3s background-color
+            &:hover
+                text-decoration: none
+                color: #fff
+                background-color: $accent2
+        &-block
+            z-index: -1 
+            top: -5px
+            color: #222
+            position: absolute
+            background-color: #fff
+            margin-left: -18px
+            margin-right: -18px
+            width: 100%
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            transition: .3s
+            padding: 0
+            max-height: 0px
+            padding-left: 18px
+            padding-right: 18px
+            transform: scaleY(0)
+            transform-origin: 50% 0
+            padding-top: 45px
+            padding-bottom: 22px    
+            opacity: 0
+            text-align: left
+            &__title
+                color: $accent
+                font-size: 15px
+                line-height: 125%
+                font-weight: 500
+                margin-bottom: 5px
+            a
+                color: #222
+                transiton: .3s color
+                &:hover
+                    color: $accent
+                    text-decoration: none
+            &.active
+                max-height: 1000px
+                transform: scaleY(1)
+                transition: .5s
+                opacity: 1
+            &__list
+                padding-left: 0
+                list-style-type: none
+                margin-bottom: 13px
+                font-size: 14px
+                li
+                    display: flex
+                    align-items: flex-start
+                    text-align-last: left
+                    margin-bottom: 5px
+                    &::before
+                        display: none
+
+                
+                img
+                    margin-right: 8px
+                    float: none 
+                    vertical-align: middle
+                &_location
+                    display: inline-block
+                    vertical-align: top
+                    line-height: 120%
+                    margin-bottom: 0
+                    
+                a
+                    line-height: 125%
+                    font-weight: normal
+                    display: block
+            &__worktime
+                font-size: 13px
+                line-height: 120%
+                margin-bottom: 20px
+                line-height: 140%
+                margin-left: 23px
+                span 
+                    display: block
+                    font-size: 15px
+                    line-height: 125%
+                    font-weight: 500
+            &__feedback
+                margin-bottom: 17px
+                background-color: $accent
+                color: #fff
+                border-radius: 4px
+                height: 30px
+                line-height: 30px !important
+                text-align: center
+                padding-left: 3px   
+                padding-right: 3px
+                display: block
+                font-size: 15px !important
+                font-weight: 500
+                color: #fff !important
+            &__socials
+                list-style-type: none
+                padding-left: 0
+                display: flex
+                li
+                    a
+                        height: 25px
+                        width: 25px
+                        border-radius: 50%
+                        margin-right: 8px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background-color: $accent
+                        img
+                            max-width: 60%
+                            max-height: 60% 
+                            transition: 1s transform
+                        &:hover
+                            img
+                                transform: rotateY(360deg)
+
+                    &::before
+                        display: none
+                    &:last-child
+                        margin-right: 0
+                &_title
+                    font-size: 15px
+                    line-height: 125%
+                    margin-bottom: 7px
+
+    &-catalog
+        background: #FFFFFF
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)
+        position: absolute
+        z-index: 999
+        width: 100%
+        top: 35px
+        max-height: 0px
+        transform: scaleY(0)
+        transition: .5s
+        transform-origin: 50% 0
+        opacity: 0
+        &.open
+            max-height: 1000px
+            transform: scaleY(1)
+            opacity: 1
+        &__wrapper
+            width: 100%
+            position: relative
+        &__wrap
+            width: 1330px
+            position: absolute
+            top: 0
+            left: 0
+            margin-left: 270px
+            padding-left: 50px
+            padding-right: 10px
+            height: 100%
+            background-color: #fff
+            overflow-y: auto
+            padding-bottom: 25px
+            visibility: hidden
+            >ul
+                padding-top: 35px
+                display: block
+                column-count: 3
+                >li
+                    margin-right: 50px
+                    margin-bottom: 25px
+                    max-width: 370px
+                    break-inside: avoid
+                    >a
+                        font-weight: 500 
+                        margin-bottom: 10px
+                        display: block
+                    span.more
+                        font-weight: 500
+                        img
+                            margin-left: 5px
+                    >ul
+                        >li
+                            margin-bottom: 5px
+                            font-size: 13px
+                            &:nth-child(n+6)
+                                display: none
+                        &.full
+                            >li:nth-child(n+6)
+                                display: list-item
+                        
+        ul
+            padding-left: 0px
+            list-style-type: none
+        li:before
+            display: none
+        >ul
+            padding-left: 0
+            display: flex
+            flex-direction: column
+            position: relative
+            margin-bottom: 0
+            // padding-bottom: 25px
+            background-color: #f9f9f9
+            >li
+                background-color: #F9F9F9
+                width: 270px
+                font-size: 15px
+                line-height: 125%
+                padding-right: 20px
+                // padding-bottom: 15px
+                margin-bottom: 12px
+                padding-left: 60px
+                background-repeat: no-repeat
+                background-position: 20px 2px
+                background-size: 30px
+                position: initial
+                min-height: 36px
+                display: flex
+                align-items: center
+                a
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                &.active
+                    >a
+                        color: $accent
+                        img
+                            transform: rotate(-90deg)
+                    .newheader-catalog__wrap
+                        visibility: visible
+                &:first-child
+                    margin-top: 35px
+                &:last-child
+                    margin-bottom: 45px
+                >a
+                   
+                    font-weight: 500
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    &:hover
+                        text-decoration: none
+                    img
+                        transition: .3s transform
+                a
+                    color: #222
+                    transition: .3s color
+                    &:hover
+                        text-decoration: none
+                        color: $accent
+                >.newheader-catalog__wrap ul
+                    // position: absolute 
+                    // min-height: 600px
+    &-botmenu_mobile
+        display: none
+        ul
+            list-style-type: none
+
+@media (max-width: 1640px)
+    .newheader
+        &__location
+            margin-right: 30px
+        &-top-menu
+            li
+                margin-right: 20px
+        &-top-nav
+            &__find,&__login
+                margin-right: 13px
+            a
+                font-size: 13px
+            &__icon
+                margin-right: 2px
+        &-contacts
+            &__phone
+                a
+                    font-size: 15px
+            &-block
+                padding-top: 40px
+                &__list
+                    font-size: 13px
+                    a
+                        font-size: 13px
+                    img
+                        margin-right: 4px
+                &__socials_title
+                    font-size: 12px
+        &-catalog__wrap
+            width: 970px
+
+
+@media (max-width: 1299.98px)
+    .newheader-catalog
+        &__wrap
+            width: 670px
+    .newheader-contacts
+        &__phone a
+            font-size: 11px
+        &-block
+            right: 0
+            width: 200px
+        &__feedback
+            margin-left: 0
+            font-size: 12px
+            img
+                display: none
+
+
+@media (max-width: 991.98px)
+    .newheader
+        margin-bottom: 10px
+        &-catalog
+            >ul>li
+                width: 236px
+                padding-left: 40px
+                background-position: 8px 8px
+                background-size: 22px
+                margin-bottom: 12px
+            &__wrap
+                width: 465px
+                margin-left: 236px
+                >ul
+                    column-count: 2
+        &-main
+            &__catalog
+                height: 37px
+                font-size: 14px
+                line-height: 125%
+                width: 120px
+            &-search
+                input[type='text']
+                    padding-left: 12px
+                    font-size: 12px
+                    width: calc(100% - 27px)
+                button, input[type='submit']
+                    width: 27px
+                    img
+                        height: 14px
+                        width: 14px
+        &-contacts
+            &-block
+                padding-top: 30px
+            &__phone
+                display: flex
+                align-items: center
+                padding-left: 0
+                a
+                    font-size: 9px
+                &_caret
+                    width: 8px
+            &__feedback
+                margin-left: 0
+                font-size: 10px
+                height: 20px
+                line-height: 20px
+                img
+                    display: none
+
+@media (max-width: 767.98px)
+    .newheader
+        box-shadow: 0 1px 5px rgba(0,0,0,.14) 
+        padding-top: 10px
+        position: fixed
+        z-index: 99
+        width: 100%
+        top: 0
+        left: 0
+        background-color: #fff
+        margin-bottom: 0
+        padding-bottom: 10px
+        &-botmenu_mobile
+            display: flex
+            align-items: center
+            padding-left: 8px
+            padding-right: 8px
+            background-color: #FFFFFF
+            height: 60px
+            position: fixed
+            left: 0
+            bottom: 0
+            width: 100%
+            z-index: 99
+            box-shadow: 0 0 5px rgba(0,0,0,.1)
+            ul
+                display: flex
+                width: 100%
+                padding-left: 0
+                margin: 0
+                justify-content: space-between
+                font-size: 10px
+                align-items: flex-end
+                a
+                    text-align: center
+                    display: block
+                    color: #222
+                    font-weight: 500
+                    span
+                        display: block
+                    img
+                        display: inline-block
+                        margin-bottom: 3px
+        &-main
+            &__catalog
+                font-size: 0
+                width: 35px
+                height: 27px
+                button
+                    margin-right: 0
+            &-search
+                input[type='text']::placeholder
+                    font-size: 0
+                button, input[type='submit']
+                    img
+                        height: 17px
+                        width: 17px
+                        margin-bottom: 3px
+        &-catalog
+            &__wrapper
+                display: none
+    .newheader-top
+        padding-bottom: 0
+        &__wrapper
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 15px
+        &__burger
+            margin-right: 13px
+        &__logo
+            vertical-align: middle
+            margin-right: 0px
+            img
+                max-width: 100%
+                width: auto
+                height: 20px
+        &-nav 
+            display: inline-flex
+            font-size: 0
+            line-height: 0
+            vertical-align: middle
+            a
+                font-size: 0
+            &__icon
+                height: 16px
+                margin-right: 0
+            &__search,&__login,&__find
+                margin-right: 14px
+            &__phone
+                img
+                    height: 18px
+
+    

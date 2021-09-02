@@ -1,0 +1,40 @@
+.accordion
+    &__title
+        font-weight: 500
+        height: 40px
+        display: flex
+        align-items: center
+        padding-left: 20px
+        padding-right: 10px
+        cursor: pointer
+        transition: background-color 0.2s ease-out
+        img
+            margin-right: 15px
+            transform: rotate(180deg)
+            transition: transform 0.2s ease-out
+    &__content
+        max-height: 0
+        overflow: hidden
+        color: #000
+        padding-left: 45px
+        transition: 0.2s ease-out
+        b
+            font-weight: 500
+    &.open
+        .accordion__title
+            background-color: #F2F2F2
+            img
+                transform: rotate(0deg)
+        .accordion__content
+            padding-top: 17px
+            padding-bottom: 20px
+            max-height: none
+    &_small
+        .accordion
+            &__title
+                background-color: none
+                padding-left: 0px !important
+            &__content
+                font-weight: 300
+                padding-top: 0px !important
+                padding-left: 25px

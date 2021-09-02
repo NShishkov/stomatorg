@@ -1,0 +1,134 @@
+.left-menu
+    &__opener
+        display: none
+        background-color: $accent
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15)
+        border-radius: 4px
+        height: 30px
+        width: 34px
+        position: fixed
+        cursor: pointer
+        top: 220px
+        left: -4px
+        img
+            transition: .3s transform
+        &.active
+            img
+                transform: rotate(90deg)
+
+    ul
+        display: flex
+        flex-direction: column
+        list-style-type: none
+        padding: 0px
+        margin-bottom: 30px
+        li
+            padding-left: 20px
+            padding-right: 5px
+            text-align-last: left
+            height: 38px
+            display: flex
+            align-items: center
+            transition: .3s background-color
+            border: 1px solid #DEDEDE
+            margin-bottom: 2px
+            border-radius: 4px
+            font-weight: 500
+            a
+                color: #222
+                width: 100%
+                line-height: 15px
+            &.active
+                background-color: $accent
+                a
+                    color: #fff
+    &_gray
+        ul
+            li
+                background-color: #F2F2F2
+                border-color: #F2F2F2;
+                margin-bottom: 6px
+                img
+                    margin-right: 13px
+                    max-height: 16px
+                    max-width: 16px
+                a:hover
+                    color: $accent
+                    
+
+@media (max-width: 1639.98px)
+    .left-menu
+
+        &_gray
+            ul
+                li
+                    img
+                        margin-right: 5px
+
+@media (max-width: 991.98px)
+    .left-menu
+        ul
+            li
+                font-size: 12px
+                padding-left: 10px
+                min-height: 29px
+                height: auto
+        &_gray
+            ul
+                li
+                    padding-left: 5px
+                    min-height: 27px 
+                    height: auto
+                    img
+                        margin-right: 10px
+                
+
+@media (max-width: 767.98px)
+    .left-menu
+        &__opener
+            display: flex
+            align-items: center
+            justify-content: center
+            z-index: 99
+            
+    #left-menu
+        left: -250px
+        width: 250px
+        transition: left .1s
+        display: block !important
+        position: fixed
+        top: 280px
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16)
+        background-color: #fff
+        padding-top: 10px
+        padding-bottom: 10px
+    #left-menu.active
+        position: fixed
+        z-index: 99  
+        left: 0
+        transition: left .5s
+        .left-menu 
+            ul
+                margin-bottom: 0
+                li
+                    border: none
+                    border-radius: 0px
+                    padding-left: 7px
+                    min-height: 20px
+                    margin-bottom: 10px
+                    display: flex
+                    align-items: center
+                    transition: 0s
+                    &.active
+                        background-color: #fff
+                        border-left: 2px solid $accent
+                        a
+                            color: #222
+            &.left-menu_gray
+                border-top: 1px solid #F2F2F2
+                padding-top: 15px
+                ul
+                    li
+                        background-color: #fff
+        .catalog-sidebar_small
+            padding-right: 0

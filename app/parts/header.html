@@ -11,11 +11,612 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="icon" href="images/favicon.png">
+	<link rel="icon" href="images/favicon.ico">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
 
 </head>
 
 <body>
+
+	<header class="newheader">
+		<div class="container">
+			<div class="newheader-top">
+				<div class="row">
+					<div class="col-xl-8 col-md-4 d-none d-md-block">
+						<div class="newheader__location">
+							<a href="#">
+								<img src="../images/dist/header/location.svg" alt="Location">
+								Краснознаменск
+								<img src="../images/dist/header/caret.svg" alt="caret">
+							</a>
+							
+						</div>
+						<ul class="newheader-top-menu d-none d-xl-inline-flex">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Как купить?</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="delivery_new.html">Доставка</a></li>
+							<li><a href="#">Самовывоз</a></li>
+							<li><a href="#">Возврат</a></li>
+						</ul>
+					</div>
+					<div class="col-xl-4 col-md-8">
+					
+						<div class="newheader-top__wrapper">
+							<!-- LOCATION MOBILE -->
+							<a href='#' class="newheader-top__location d-inline-block d-md-none">
+								<img src="../images/dist/header/location.svg" alt="location">
+							</a>
+							<!-- LOCATION MOBILE END-->
+
+							<!-- LOGO MOBILE -->
+							<div class="newheader-top__logo d-inline-block d-md-none">
+								<img src="../images/dist/header/logo_mobile.svg" alt="Stomatorg">
+							</div>
+							<!-- LOGO MOBILE END-->
+
+							<div class="newheader-top-nav">
+								<div class="newheader-top-nav__phone d-inline-block d-md-none">
+									<a href="#">
+										<img class='newheader-top-nav__icon' src="../images/dist/header/phone_2.svg" alt="Phone">
+										Поиск
+									</a>
+								</div>
+								<div class="newheader-top-nav__login d-none d-md-inline-block">
+									<a href="#">
+										<img class='newheader-top-nav__icon' src="../images/dist/header/user.svg" alt="Login">
+										Войти
+									</a>
+								</div>
+								<div class="newheader-top-nav__find  d-none d-md-inline-block">
+									<a href="#">
+										<img class='newheader-top-nav__icon' src="../images/dist/header/box.svg" alt="Box">
+										Отследить
+									</a>
+								</div>
+								<div class="newheader-top-nav__cart d-none d-md-inline-block">
+									<a href="#">
+										<img class='newheader-top-nav__icon' src="../images/dist/header/cart.svg" alt="Cart">
+										<span class="newheader-top-nav__cart__count">
+											26
+										</span>
+										товаров - 
+										<span class="newheader-top-nav__cart__price">
+											1 709 854 руб.
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="newheader-main">
+				<div class="row align-items-center">
+					<div class="col-xl-4 col-md-3">
+						<a href="#" class="newheader-main__logo d-none d-md-block">
+							<img src="../images/dist/header/stomatorg_logo.svg" alt="Stomatorg">	
+						</a>
+					</div>
+					<div class="col-xl-6 col-md-7">
+						<div class="newheader-main-wrapper">
+							<a href="#" class="newheader-main__catalog">
+								<!-- <img src="../images/dist/header/menu.svg"> -->
+								<button class="burger burger2">
+									<span></span>
+								</button>
+								Каталог
+							</a>
+							<div class="newheader-main-search">
+								<form action="">
+									<input type="text" placeholder="Найти среди 30 000 наименований">
+									<button type="submit"><img src="../images/dist/header/search.svg" alt="Искать"></button>
+								</form>
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-md-2 d-none d-md-block">
+						<div class="newheader-contacts">
+							<div class="newheader-contacts__phone">
+								<a href="tel:+78003010605">8 (800) 301-06-05</a>
+								<img src="../images/dist/header/caret.svg" alt="" class="newheader-contacts__phone_caret">	
+								<div class="newheader-contacts-block">
+									<div class="newheader-contacts-block__title">
+										Клиентский отдел:
+									</div>
+									<ul class="newheader-contacts-block__list">
+										<li>
+											<a href="tel:84956209735"><img src="../images/dist/header/phone_cont.svg" alt="phone">8 (495) 620-97-35</a>
+										</li>
+										<li>
+											<a href="mailto:zakaz@stomatorg.ru"><img src="../images/dist/header/mail_cont.svg" alt="mail">zakaz@stomatorg.ru</a>
+										</li>
+										<li>
+											<img src="../images/dist/header/clock_cont.svg" alt="Время работы">Пн–Пт: 09:00 – 18:30
+										</li>
+									</ul>
+									<div class="newheader-contacts-block__title">
+										Склад:
+									</div>
+									<ul class="newheader-contacts-block__list">
+										<li>
+											<img src="../images/dist/header/marker_cont.svg" alt="Location"><p class="newheader-contacts-block__list_location">г. Москва, поселение Сосенское, деревня Николо-Хованское, д. 1017с1</p>
+										</li>
+										<li>
+											<img src="../images/dist/header/clock_cont.svg" alt="Время работы">Пн–Пт: 09:00 – 17:00
+										</li>
+									</ul>
+									<a href="#" class="newheader-contacts-block__feedback">
+										Заказать звонок
+									</a>
+									<p class="newheader-contacts-block__socials_title">
+										Мы в социальных сетях:
+									</p>
+									<ul class="newheader-contacts-block__socials">
+										<li><a href="#"><img src="../images/dist/footer/Youtube.svg" alt="Youtube"></a></li>
+										<li><a href="#"><img src="../images/dist/footer/Vk.svg" alt="Vk"></a></li>
+										<li><a href="#"><img src="../images/dist/footer/fb.svg" alt="FB"></a></li>
+										<li><a href="#"><img src="../images/dist/footer/instagram.svg" alt="Instagram"></a></li>
+										<li><a href="#"><img src="../images/dist/footer/telegram.svg" alt="Telegram"></a></li>
+									</ul>
+								</div>
+								
+							</div>
+							<a href="#" class="newheader-contacts__feedback">
+								<img src="../images/dist/header/phone.svg" alt="Phone">
+								Заказать звонок
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- DESCTOP MENU -->
+			<div class="newheader-catalog__wrapper">
+				
+				<nav class="newheader-catalog">
+					<ul>
+						<li class='active' style="background-image: url('../images/dist/header/menu/cad.svg');">
+							<a href="#">Cad/Cam <img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap">
+								<ul>
+									<li >
+										<a href="#">Терапия</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+										</ul>
+									</li>
+									<li >
+										<a href="#">Терапия</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+											<li><a href="#">Адгезивные материалы</a></li>
+										</ul>
+									</li>
+									<li >
+										<a href="#">Терапия</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+										</ul>
+									</li>
+									<li >
+										<a href="#">Терапия</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+										</ul>
+									</li>
+									<li >
+										<a href="#">Терапия</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/stom_ob.svg');">
+							<a href="#">Стоматологическое оборудование<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Стоматологические установки</a>
+										<ul>
+											<li><a href="#">Установки KaVo (Германия)</a></li>
+											<li><a href="#">Установки OMS (Италия)</a></li>
+											<li><a href="#">Установки  Fengdan QL2028 Pragmatic (Китай)</a></li>
+											<li><a href="#">Установки Planmeca (Финляндия)</a></li>
+											<li><a href="#">Установки Dentsply Sirona (Германия)</a></li>
+											<li><a href="#">Установки Victor (Китай)</a></li>
+											<li><a href="#">Стоматологические кресла и стулья</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Автоклавы</a>
+									</li>
+									<li>
+										<a href="#">Аппараты для эндодонтии	</a>
+									</li>
+									<li><a href="#">Аспирационные системы</a></li>
+									<li><a href="#">Компрессоры</a></li>
+									<li><a href="#">Лампы полимеризационные</a></li>
+									<li><a href="#">Микроскопы стоматологические</a></li>
+									<li><a href="#">Бинокуляры</a></li>
+									<li>
+										<a href="#">Наконечники, микромоторы и средства для ухода</a>
+										<ul>
+											<li><a href="#">Воздушные микромоторы</a></li>
+											<li><a href="#">Порошкоструйные и пескоструйные инструменты</a></li>
+											<li><a href="#">Прочее оборудование и инструменты</a></li>
+											<li><a href="#">Электрические микромоторы</a></li>
+											<li><a href="#">Прямые</a></li>
+											<li><a href="#">Скайлеры</a></li>
+											<li><a href="#">Средства для ухода и смазки наконечников</a></li>
+											<li><a href="#">Турбиновые</a></li>
+											<li><a href="#">Угловые</a></li>
+											<li><a href="#">Хирургические</a></li>
+											<li><a href="#">Эндодонтические наконечники</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Оборудование для диагностики и отбеливания</a></li>
+									<li><a href="#">Порошкоструйные,  пескоструйные наконечники и расходные материалы для них</a></li>
+									<li><a href="#">Потолочные бестеневые светильники</a></li>
+									<li><a href="#">Приборы для лечения и диагностики</a></li>
+									<li>
+										<a href="#">Рентгеновское оборудование</a>
+										<ul>
+											<li><a href="#">Акссесуары</a></li>
+											<li><a href="#">Программное обеспечение</a></li>
+											<li><a href="#">Рентген аксессуары</a></li>
+											<li><a href="#">Дентальные компьютерные томографы 3D</a></li>
+											<li><a href="#">Ортопантамографы цифровые</a></li>
+											<li><a href="#">Радиовизиографы</a></li>
+											<li><a href="#">Рентгеновские аппараты</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Скайлеры и насадки для них</a>
+										<ul>
+											<li><a href="#">Скайлеры</a></li>
+											<li><a href="#">насадки Woodpecker (подходит к EMS)</a></li>
+											<li><a href="#">Насадки Acteon</a></li>
+											<li><a href="#">насадки DTE</a></li>
+											<li><a href="#">насадки Kavo</a></li>
+											<li><a href="#">насадки Mectron</a></li>
+											<li><a href="#">насадки EMS</a></li>
+											<li><a href="#">насадки Satelek</a></li>
+											<li><a href="#">насадки NSK</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Стерилизационное оборудование</a>
+										<ul>
+											<li><a href="#">Дистиляторы</a></li>
+											<li><a href="#">Моюще-дезинфицирующие машины</a></li>
+											<li><a href="#">Камеры для хранения стерильного инструмента</a></li>
+											<li><a href="#">Облучатели</a></li>
+											<li><a href="#">Стерилизаторы горячевоздушные</a></li>
+											<li><a href="#">Ультразвуковые мойки</a></li>
+											<li><a href="#">Упаковочные машины (ламинаторы)</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Эндомоторы и оборудование для эндодонтии</a></li>
+									<li><a href="#">Сканеры</a></li>
+									<li><a href="#">Дефибриляторы</a></li>
+									<li>
+										<a href="#">Оборудование для врач. приема</a>
+										<ul>
+											<li><a href="#">Приборы для обтурации каналов</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Стоматологические кресла и стулья</a></li>
+								</ul>
+								
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/stom_mat.svg')">
+							<a href="#">Стоматологические материалы<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Терапия</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы2</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб2</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/zub_ob.svg')">
+							<a href="#">Зуботехническое оборудование<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Терапия2</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы2</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб2</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/zub_mat.svg')">
+							<a href="#">Зуботехнические материалы<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Терапия3</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы2</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб2</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/implant.svg')">
+							<a href="#">Имплаталогия<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Терапия4</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы2</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб2</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/mebel.svg')">
+							<a href="#">Мебель<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Терапия5</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы2</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб2</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li style="background-image: url('../images/dist/header/menu/sale.svg')">
+							<a href="#">Акции и скидки<img src="../images/dist/header/caret.svg"></a>
+							<div class="newheader-catalog__wrap" >
+								<ul>
+									<li>
+										<a href="#">Терапия6</a>
+										<ul>
+											<li><a href="#">Адгезивные материалы2</a></li>
+											<li><a href="#">Аксессуары для наложенипя пломб2</a></li>
+											<li><a href="#">Инструменты для терапевтической стоматологии2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- DESCTOP MENU END-->
+
+			<!-- MOBILE MENU -->
+
+			<div class="mobile_menu_container d-md-none" id='mobile_menu_container'>
+				<nav class="mobile_menu_content">
+					<ul>
+						<li>
+							<a href="#" class="parent"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/cad.svg"></div>Cad/Cam</a>
+							<ul>
+								<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+								<li><a href="#">Компьютерная техника</a></li>
+								<li>
+									<a href="#" class="parent">Ноутбуки и аксессуары</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Ноутбуки и аксессуары</a></li>
+										<li><a href="#">Ноутбуки</a></li>
+										<li><a href="#">Аксессуары</a></li>
+										<li>
+											<a href="#" class="parent">Компьютеры и комплектующие</a>
+											<ul>
+												<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+												<li><a href="#">Компьютеры и комплектующие</a></li>
+												<li><a href="#">Компьютеры</a></li>
+												<li><a href="#">Моноблоки</a></li>
+												<li><a href="#">Материнские платы</a></li>
+												<li><a href="#">Процессоры</a></li>
+												<li><a href="#">Видеокарты</a></li>
+												<li><a href="#">Жесткие диски HDD</a></li>
+												<li><a href="#">Корпуса</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Перифирия</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Техника для печати</a></li>
+								<li><a href="#">Микрофоны</a></li>
+								<li><a href="#">Вебкамеры</a></li>
+								<li><a href="#">Наушники</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="parent"><div class="mobile-menu__icon"><img src="../images/dist/header/menu/stom_ob.svg"></div>Стоматологическое оборудование</a>
+							<ul>
+								<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg">Стоматологическое оборудование</a></li>
+								<li>
+									<a href="#" class="parent">Стоматологические установки</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Установки KaVo (Германия)</a></li>
+										<li><a href="#">Установки OMS (Италия)</a></li>
+										<li><a href="#">Установки  Fengdan QL2028 Pragmatic (Китай)</a></li>
+										<li><a href="#">Установки Planmeca (Финляндия)</a></li>
+										<li><a href="#">Установки Dentsply Sirona (Германия)</a></li>
+										<li><a href="#">Установки Victor (Китай)</a></li>
+										<li><a href="#">Стоматологические кресла и стулья</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Автоклавы</a>
+								</li>
+								<li>
+									<a href="#">Аппараты для эндодонтии	</a>
+								</li>
+								<li><a href="#">Аспирационные системы</a></li>
+								<li><a href="#">Компрессоры</a></li>
+								<li><a href="#">Лампы полимеризационные</a></li>
+								<li><a href="#">Микроскопы стоматологические</a></li>
+								<li><a href="#">Бинокуляры</a></li>
+								<li>
+									<a href="#" class="parent">Наконечники, микромоторы и средства для ухода</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Воздушные микромоторы</a></li>
+										<li><a href="#">Порошкоструйные и пескоструйные инструменты</a></li>
+										<li><a href="#">Прочее оборудование и инструменты</a></li>
+										<li><a href="#">Электрические микромоторы</a></li>
+										<li><a href="#">Прямые</a></li>
+										<li><a href="#">Скайлеры</a></li>
+										<li><a href="#">Средства для ухода и смазки наконечников</a></li>
+										<li><a href="#">Турбиновые</a></li>
+										<li><a href="#">Угловые</a></li>
+										<li><a href="#">Хирургические</a></li>
+										<li><a href="#">Эндодонтические наконечники</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Оборудование для диагностики и отбеливания</a></li>
+								<li><a href="#">Порошкоструйные,  пескоструйные наконечники и расходные материалы для них</a></li>
+								<li><a href="#">Потолочные бестеневые светильники</a></li>
+								<li><a href="#">Приборы для лечения и диагностики</a></li>
+								<li>
+									<a href="#" class="parent">Рентгеновское оборудование</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Акссесуары</a></li>
+										<li><a href="#">Программное обеспечение</a></li>
+										<li><a href="#">Рентген аксессуары</a></li>
+										<li><a href="#">Дентальные компьютерные томографы 3D</a></li>
+										<li><a href="#">Ортопантамографы цифровые</a></li>
+										<li><a href="#">Радиовизиографы</a></li>
+										<li><a href="#">Рентгеновские аппараты</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="parent">Скайлеры и насадки для них</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Скайлеры</a></li>
+										<li><a href="#">насадки Woodpecker (подходит к EMS)</a></li>
+										<li><a href="#">Насадки Acteon</a></li>
+										<li><a href="#">насадки DTE</a></li>
+										<li><a href="#">насадки Kavo</a></li>
+										<li><a href="#">насадки Mectron</a></li>
+										<li><a href="#">насадки EMS</a></li>
+										<li><a href="#">насадки Satelek</a></li>
+										<li><a href="#">насадки NSK</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="parent">Стерилизационное оборудование</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Дистиляторы</a></li>
+										<li><a href="#">Моюще-дезинфицирующие машины</a></li>
+										<li><a href="#">Камеры для хранения стерильного инструмента</a></li>
+										<li><a href="#">Облучатели</a></li>
+										<li><a href="#">Стерилизаторы горячевоздушные</a></li>
+										<li><a href="#">Ультразвуковые мойки</a></li>
+										<li><a href="#">Упаковочные машины (ламинаторы)</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Эндомоторы и оборудование для эндодонтии</a></li>
+								<li><a href="#">Сканеры</a></li>
+								<li><a href="#">Дефибриляторы</a></li>
+								<li>
+									<a href="#" class="parent">Оборудование для врач. приема</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Приборы для обтурации каналов</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Стоматологические кресла и стулья</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="parent"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/stom_mat.svg"></div>Стоматологические материалы</a>
+							<ul>
+								<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+								<li><a href="#">Одежда</a></li>
+								<li><a href="#">Брюки</a></li>
+								<li>
+									<a href="#" class="parent">Куртки</a>
+									<ul>
+										<li><a href="#" class="back"><img src="../images/dist/header/arrow_left_white.svg"></a></li>
+										<li><a href="#">Куртки</a></li>
+										<li><a href="#">Зимние куртки</a></li>
+										<li><a href="#">Летние ветровки</a></li>
+										<li><a href="#">Осенняя коллекция</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Штанишки</a></li>
+								<li><a href="#">Майки</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/zub_ob.svg"></div>Зуботехническое оборудование</a></li>
+						<li><a href="#"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/stom_mat.svg"></div>Зуботехнические материалы</a></li>
+						<li><a href="#"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/implant.svg"></div>Имплаталогия</a></li>
+						<li><a href="#"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/mebel.svg"></div>Мебель</a></li>
+						<li><a href="#"><div class='mobile-menu__icon'><img src="../images/dist/header/menu/sale.svg"></div>Акции и скидки</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- MOBILE MENU END-->
+
+			<!-- FIXED MOBILE BOT MENU -->
+			<div class="newheader-botmenu_mobile">
+				<ul>
+					<li><a href="#"><img src="../images/dist/icons/bot_menu/stomatorg_mini_blue.svg"><span>Главная</span></a></li>
+					<li><a href="#"><img src="../images/dist/icons/bot_menu/catalog_blue.svg"><span>Каталог</span></a></li>
+					<li><a href="#"><img src="../images/dist/icons/bot_menu/enter_blue.svg"><span>Войти</span></a></li>
+					<li><a href="#"><img src="../images/dist/icons/bot_menu/profile_blue.svg"><span>Регистрация</span></a></li>
+					<li><a href="#"><img src="../images/dist/icons/bot_menu/cart_new_blue.svg"><span>Корзина</span></a></li>
+				</ul>
+			</div>
+			<!-- FIXED MOBILE BOT MENU END-->
+		</div>
+	</header>
+	<main>

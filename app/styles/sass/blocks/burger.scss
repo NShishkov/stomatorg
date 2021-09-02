@@ -1,0 +1,246 @@
+ 
+  button.burger {
+    width:20px;
+    height:20px;
+    border:none;
+    background:transparent;
+    position:relative;
+    cursor:pointer;
+    margin-right: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    &:focus {
+      outline:none;
+    }
+    
+    //  Menu Burger 1
+    &.burger1 {
+      &:after,
+      &:before,
+      span {
+        width:100%;
+        height:1.7px;
+        border-radius:100px;
+        position:absolute;
+        left:0px;
+        background:#923cbe;
+      }
+  
+      &:after,
+      &:before {
+        content:"";
+      }
+  
+      &:after {
+        top:0px;
+        margin-top:0px;
+        transition: transform 0.2s, 0.2s all 0.4s;
+      }
+  
+      &:before {
+        bottom:0px;
+        margin-bottom:0px;
+        transition: transform 0.2s, 0.2s all 0.4s;
+      }
+  
+      span {
+        top:50%;
+        margin-top:-2px;
+        visibility: visible;
+        opacity:1;
+        transition: visibility 3.9s ease;
+        background: red
+      }
+  
+      &.on {
+  
+        &:after {
+          transform:rotate(45deg);
+          top:50%;
+          margin-top:-2px;
+          transition: all 0.2s, 0.2s transform 0.4s;
+        }
+  
+        &:before {
+          transform:rotate(-45deg);
+          bottom:50%;
+          margin-bottom:-2px;
+          transition: all 0.2s, 0.2s transform 0.4s;
+        }
+  
+        span {
+          visibility:hidden;
+          transition: opacity 0.4s, visibility 0.4s;
+          opacity:0;
+        }
+  
+  
+      }
+    }
+    
+    //  Menu Burger 2
+    &.burger2 {
+      &:after,
+      &:before,
+      span {
+        width:100%;
+        height:3px;
+        border-radius:100px;
+        position:absolute;
+        display:block;
+        background:#fff;
+        
+      }
+  
+      &:after,
+      &:before {
+        content:"";
+        transition: 0.3s width 0.4s;
+      }
+  
+      &:after {
+        top:0px;
+        left:0px;
+        margin-top:0px;
+      }
+  
+      &:before {
+        bottom:0px;
+        right:0px;
+        margin-bottom:0px;
+      }
+  
+      span {
+         top:50%;
+         margin-top:-2px;
+         transition: transform 0.3s ;
+          &:before {
+            content:"";
+            background:#fff;
+            width:100%;
+            height:3px;
+            border-radius:100px;
+            position:absolute;
+            left:0px;
+            transition: transform 0.3s ;
+          }
+      }
+  
+      &.on {
+  
+  
+        &:after {
+          transition: all 0.2s;
+          width:0%;
+          left:0px;
+        }
+  
+        &:before {
+           transition: all 0.2s;
+          width:0%;
+          right:0px;
+        }
+  
+        span {
+          transform:rotate(45deg);
+          transition: 0.3s transform 0.4s ;
+          &:before {
+            transform:rotate(-90deg);
+            transition: 0.3s transform 0.4s ;
+          }
+        }
+  
+  
+      }
+    }
+
+    &.burger2.blue{
+      vertical-align: middle;
+      &:after,
+      &:before,
+      span {
+        background: $accent;
+      }
+      span {
+         &:before {
+           background: $accent;
+         }
+     }
+    }
+    
+    //  Menu Burger 1
+    &.burger3 {
+      &:after,
+      &:before,
+      span {
+        width:100%;
+        height:4px;
+        border-radius:100px;
+        position:absolute;
+        left:0px;
+        background:#923cbe;
+        transform:rotate(0deg);
+        transition: all 0.4s;
+      }
+  
+      &:after,
+      &:before {
+        content:"";
+      }
+  
+      &:after {
+        top:0px;
+        margin-top:0px;
+        
+      }
+  
+      &:before {
+        bottom:0px;
+        margin-bottom:0px;
+       }
+  
+      span {
+        top:50%;
+        margin-top:-2px;
+        }
+  
+      &.on {
+  
+        &:after {
+          transform:rotate(135deg)translate(9px,-9px);
+        }
+  
+        &:before { 
+          transform:rotate(225deg);
+          bottom:50%;
+          margin-bottom:-2px;
+        }
+  
+        span {
+          transform:rotate(135deg);
+        }
+  
+      }
+    }
+     
+  }
+  
+  
+  @media (max-width: 991.98px){
+    button.burger{
+      width: 15px;
+      height: 12px;
+    }
+
+
+    button.burger.burger2 span, button.burger.burger2:after, button.burger.burger2:before{
+      height: 2px;
+    }
+
+    button.burger.burger2 span:before{
+      height: 2px;
+    }
+    button.burger.burger2 span{
+      margin-top: -1px;
+    }
+  }

@@ -1,0 +1,260 @@
+<!--#set var="title" value="Стоматорг - Оплата" -->
+<!--#include virtual="/parts/header.html" -->
+
+
+
+<div class="container">
+    <div class="row">
+        <!-- BREADCRUMBS -->
+        <div class="col-12">
+            <ul id="breadcrumbs" class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item"
+                        href="/" title="Главная"><span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item"
+                        href="#" title="Скайлеры"><span itemprop="name">Контакты</span></a>
+                    <meta itemprop="position" content="5">
+                </li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <h1>Оплата</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-lg-4 col-xl-2 d-none d-md-block">
+            <div class="catalog-sidebar_small">
+                <!--#include virtual="/parts/menu-left.html" -->
+            </div>
+        </div>
+
+
+        <div class="col-md-9 col-lg-8 col-xl-10">
+            <h4> <img src="./images/dist/payment/info.svg" style='margin-right: 6px;' height='13' alt="Информация" class="d-sm-none">Способы оплаты</h4>
+            <div class="payment-info">
+                <img src="./images/dist/payment/info.svg" alt="Информация" class="payment-info__img">
+                <div class="payment-info__text">
+                    <p>Способ оплаты любого заказа Вы выбираете при его оформлении.</p>
+                    <p>Оплата в Интернет-магазине производится только в рублях.</p>
+                    <p>После подтверждения заказа оператором Интернет-магазина способ оплаты изменен быть не может.</p>
+                    <p>Минимальная сумма заказа <span class="blue">1 000 руб.</span> </p>
+                </div>
+            </div>
+            <p>Заказы менее <span class="blue">1 000 рублей</span>, мы принимаем только при выборе нашей курьерской службы и оплаты картой на сайте.</p>
+            
+
+            <h4 class="d-sm-none" style='color: #000000;'>Выберете способ оплаты:</h4>
+            <select class="payment-select d-sm-none">
+                <option data-value='table1' selected>Оплата наличными</option>
+                <option data-value="table1">Банковской картой</option>
+                <option data-value="table2">Платежными системами на сайте</option>
+                <option data-value="table2">Оплата в банкоматах и кассах Сбербанка</option>
+                <option data-value="table2">Оплата через банковский платежный</option>
+                <option data-value="table2">Безналичная оплата по счету</option>
+            </select>
+
+            <table id='table1' class="payment-mobtable visible d-sm-none">
+                <tbody>
+                    <tr>
+                        <td class='bold' rowspan="2">Доставка</td>
+                        <td>Курьер Стоматорга</td>
+                        <td class="center"><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td>Транспортная компания</td>
+                        <td class="center"><img src="./images/dist/payment/false.svg" alt="Недоступно"></td>
+                    </tr>
+                    <tr>
+                        <td class="bold" rowspan="2">Самовывоз</td>
+                        <td>Склад Стоматорга</td>
+                        <td class="center"><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td>Пункт ПВЗ и постоматы</td>
+                        <td class="center"><img src="./images/dist/payment/false.svg" alt="Недоступно"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table id='table2' class="payment-mobtable d-sm-none">
+                <tbody>
+                    <tr>
+                        <td class='bold' rowspan="2">Доставка</td>
+                        <td>Курьер Стоматорга</td>
+                        <td class="center"><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td>Транспортная компания</td>
+                        <td class="center"><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td class="bold" rowspan="2">Самовывоз</td>
+                        <td>Склад Стоматорга</td>
+                        <td class="center"><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td>Пункт ПВЗ и постоматы</td>
+                        <td class="center"><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <table class="payment-table">
+                <tbody>
+                    <tr>
+                        <td class='center' rowspan="2">Способы оплаты:</td>
+                        <td class="bdrn center gray" colspan="2">Доставка</td>
+                        <td class='center gray' colspan="2">Самовывоз</td>
+                    </tr>
+                    <tr>
+                        <td class='center gray'>Курьер Стоматорга</td>
+                        <td class='center gray'>Транспортная компания</td>
+                        <td class='center gray'>Склад Стоматорга</td>
+                        <td class='center gray'>Пункт ПВЗ и постоматы</td>
+                    </tr>
+                    <tr>
+                        <td>Оплата наличными</td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/false.svg" alt="Недоступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/false.svg" alt="Недоступно"></td>
+                    </tr>
+                    <tr>
+                        <td>Банковской картой</td>
+                        <td class='center' ><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center' ><img src="./images/dist/payment/false.svg" alt="Недоступно"></td>
+                        <td class='center' ><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center' ><img src="./images/dist/payment/false.svg" alt="Недоступно"></td>
+                    </tr>
+                    <tr>
+                        <td>Платежными системами на сайте</td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Оплата в банкоматах и кассах Сбербанка<br>
+                            <small>по наименованию компании (Стоматорг)</small>
+                        </td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Оплата через банковский платежный<br> терминал в Уралсиб<br>
+                            <small>по наименованию компании (Стоматорг)</small>
+                        </td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                    <tr>
+                        <td >Безналичная оплата по счету</td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                        <td class='center'><img src="./images/dist/payment/true.svg" alt="Доступно"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Оплата банковской картой онлайн</h4>
+            
+            <div class="payment-block">
+                <p>Для оплаты покупки Вы будете перенаправлены на платежный шлюз ПАО «Сбербанк России» для ввода реквизитов Вашей карты. Пожалуйста, приготовьте Вашу пластиковую карту заранее. Соединение с платежным шлюзом и передача информации осуществляется в защищенном режиме с использованием протокола шифрования SSL.</p>
+                <p>При выборе формы оплаты с помощью пластиковой карты проведение платежа по заказу производится непосредственно после его оформления. После завершения оформления заказа в нашем магазине, Вы должны будете нажать на кнопку «Оплата банковской картой», при этом система переключит Вас на страницу авторизационного сервера, где Вам будет предложено ввести данные пластиковой карты, инициировать ее авторизацию, после чего вернуться в наш магазин кнопкой "Вернуться в магазин".</p>
+                <p>После того, как Вы возвращаетесь в наш магазин, система уведомит Вас о результатах авторизации. В случае подтверждения авторизации Ваш заказ будет автоматически выполняться в соответствии с заданными Вами условиями. В случае отказа в авторизации карты Вы сможете повторить процедуру оплаты.</p>
+                <p>В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa или MasterCard Secure Code для проведения платежа также может потребоваться ввод специального пароля. Способы и возможность получения паролей для совершения интернет-платежей Вы можете уточнить в банке, выпустившем карту.</p>
+                <p>Настоящий сайт поддерживает 128-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО «Сбербанк России». Введенная информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платежных систем Visa Int. и  MasterCard Europe Sprl.</p>
+            </div>
+
+            <h4>Аннулирование заказа</h4>
+
+            <div class="payment-block">
+                <p>При аннулировании позиций из оплаченного заказа (или при аннулировании заказа целиком), Вы можете заказать другой товар на эту сумму, либо вернуть всю сумму на карту предварительно написав письмо на e-mail.</p>
+                <p class="red normal">*Уважаемые покупатели, цены интернет-магазина могут отличаться от розничных цен компании «Стоматорг», цены действительны в течении одного календарного дня с момента оформления заказа, при условии 100% предоплаты и размещения заказа через интернет-магазин.</p>
+                <p class="blue normal">Наша компания выполняет требования в соответствии с 152-ФЗ «О персональных данных».</p>
+            </div>
+
+            <div class="payment-requisites">
+
+                <div class="payment-requisites-item">
+                    <div class="payment-requisites-item__title">Банковские реквизиты:</div>
+                    <div class="payment-requisites-item__info">
+                        <p><b>Юридический адрес:</b> 117485, г. Москва, ул. Профсоюзная, д.88/20, 
+                            этаж а1, помещение I, комната 35</p>
+                        <p><b>Фактический адрес:</b> 117485, г. Москва,  ул. Профсоюзная, д. 88/20
+                            этаж а1, помещение I, комната 35</p>
+                        <p><b>ОГРН </b>1027739057576</p>
+                        <p><b>ИНН </b>7704047449</p>
+                        <p><b>КПП </b>772801001</p>
+                        <p><b>ОКПО </b>17551738</p>
+                        <p><b>ОКВЭД </b>46.46</p>
+                        <p><b>ОКОПФ </b>12300</p>
+                        <p><b>ОКФС </b>16</p>
+                    </div>
+                </div>
+
+                <div class="payment-requisites-item green">
+                    <div class="payment-requisites-item__title">Реквизиты для перечисления на расчетный счет в ПАО «Сбербанк России»:</div>
+                    <div class="payment-requisites-item__info">
+                        <p><b>Получатель платежа:</b> ООО «Стоматорг»</p>
+                        <p><b>ИНН</b> 7704047449</p>
+                        <p><b>КПП</b> 772801001 </p>
+                        <p><b>Расчетный счет № </b>40 702 810 138 000 068 322</p>
+                        <p><b>Банк:</b> ПАО «Сбербанк России »  г. Москва</p>
+                        <p><b>Корр. счет № </b>30 101 810 400 000 000 225</p>
+                        <p><b>БИК № </b>044525225</p>
+                    </div>
+                </div>
+
+                <div class="payment-requisites-item green2">
+                    <div class="payment-requisites-item__title">Реквизиты для перечисления на расчетный счет в банк Филиал «Корпоративный ПАО «Совкомбанк» г. Москва: </div>
+                    <div class="payment-requisites-item__info">
+                        <p><b>Получатель платежа:</b> ООО «Стоматорг»</p>
+                        <p><b>ИНН </b>7704047449</p>
+                        <p><b>КПП</b> 772801001 </p>
+                        <p><b>Расчетный счет №</b> 40 702 810 300 000 440 523</p>
+                        <p><b>Банк:</b>  Филиал «Корпоративный» ПАО «Совкомбанк» г. Москва</p>
+                        <p><b>Корр. счет №</b> 30 101 810 445 250 000 836</p>
+                        <p><b>БИК №</b> 044525360</p>                        
+                    </div>
+                </div>
+
+                <div class="payment-requisites-item blue">
+                    <div class="payment-requisites-item__title">Реквизиты для перечисления на расчетный счет в ПАО: «БАНК УРАЛСИБ»:</div>
+                    <div class="payment-requisites-item__info">
+                      <p><b>Получатель платежа: </b>ООО «Стоматорг»</p>
+                      <p><b>ИНН</b> 7704047449</p>
+                      <p><b>КПП</b> 772801001 </p>
+                      <p><b>Расчетный счет №</b> 40 702 810 600 540 001 590</p>
+                      <p><b>Банк:</b> ПАО «БАНК УРАЛСИБ» г. Москва</p>
+                      <p><b>Корр. счет №</b> 30 101 810 100 000 000 787</p>
+                      <p><b>БИК №</b> 044525787</p>                    
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--#include virtual="/parts/footer.html" -->

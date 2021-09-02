@@ -1,0 +1,697 @@
+.element
+    &-gallery
+        &-thumb
+            display: inline-block
+            height: 430px
+            width: 100px
+            .swiper-slide img
+                width: 100%
+                height: 100%
+                display: block
+                object-fit: contain
+            &__wrapper
+                margin-top: 20px
+                margin-bottom: 20px
+                display: inline-block
+                position: relative
+        &-main
+            vertical-align: top
+            height: 470px 
+            width: 470px
+            margin-left: 35px
+            display: inline-block
+            .swiper-slide
+                display: flex
+                align-items: center
+                justify-content: center
+            img
+                height: 95%
+                width: 95%
+                object-fit: contain
+    &-info__wrapper
+        vertical-align: top
+        margin-bottom: 50px
+    &-topinfo
+        display: flex
+        &-left
+            width: calc(100% - 40px)
+            &-rating
+                vertical-align: middle
+                display: inline-flex
+                align-items: center
+                margin-right: 50px
+                margin-bottom: 20px
+                span
+                    margin-right: 4px
+                    line-height: 17px
+                    font-size: 15px
+                &__stars
+                    line-height: 1
+            &-orders
+                vertical-align: middle
+                display: inline-flex
+                font-size: 13px
+                align-items: center
+                margin-bottom: 20px
+                color: #000
+                img
+                    height: 13px
+                    margin-right: 11px
+            &-props
+                font-size: 15px
+                margin-bottom: 30px
+                line-height: 1.7
+                b
+                    font-weight: 600
+        &-right
+            width: 40px
+            text-align: right
+            position: relative
+            margin-top: 20px
+            &__logo
+                position: absolute
+                top: 0
+                right: 0
+                width: 100px
+                img
+                    width: 100% !important
+            &__like
+                display: inline-block
+                height: 16px
+                width: 18px
+                background-color: #C7C7C7
+                mask: url('../images/dist/element/Like.svg') no-repeat center
+                cursor: pointer
+                transition: .3s background-color
+                margin-bottom: 45px
+                &:hover,.active
+                    background-color: #e43535
+            &__cz
+                width: 34px
+                height: 35px
+    &-sales
+        margin-bottom: 40px
+        font-size: 13px
+        &-item
+            background-color: #F2F2F2
+            margin-bottom: 20px
+            padding-top: 11px
+            padding-bottom: 11px
+            padding-left: 20px
+            padding-right: 20px
+            position: relative
+            display: flex
+            align-items: center
+            &:last-child
+                margin-bottom: 0
+            &__icon
+                width: 48px
+                height: auto
+                margin-right: 20px
+            &__title
+                margin-top: 5px
+                margin-bottom: 10px
+                line-height: 120%
+                font-weight: bold
+                max-width: 285px
+            &__text
+                line-height: 112%
+            &__date
+                background-color: $red
+                font-size: 13px
+                color: #fff
+                height: 22px
+                display: flex
+                align-items: center
+                justify-content: center
+                padding-left: 8px
+                padding-right: 8px
+                min-width: 90px
+                position: absolute
+                top: 10px
+                right: 20px
+                border-radius: 4px
+    &-prices
+        margin-bottom: 20px
+        color: #000
+        &__old
+            font-size: 15px
+            line-height: 140%
+            text-decoration-line: line-through
+            margin-bottom: 5px
+            + .element-prices__cur
+                color: $red
+        &__cur
+            font-size: 26px
+            line-height: 120%
+            font-weight: 500
+    &-buttons
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        align-items: center
+        &-count
+            width: 25%
+            display: inline-flex
+            border: 1px solid #DEDEDE
+            box-sizing: border-box
+            border-radius: 8px
+            height: 36px
+            font-weight: 500
+            margin-right: 10px
+            margin-bottom: 20px
+            input
+                border: none
+                appearance: textfield
+                width: calc(100% - 56px)
+                text-align: center
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+                    margin: 0
+            span
+                width: 28px 
+                text-align: center
+                line-height: 36px
+                cursor: pointer
+                border-radius: 8px
+                transition: .3s background-color
+                &:hover
+                    background-color: #efefef
+                    
+        &__item
+            width: calc(25% - 10px)
+            text-align: center
+            height: 36px
+            line-height: 36px
+            background-color: $accent
+            color: #fff
+            border-radius: 4px
+            font-weight: 500
+            border: 1px solid $accent
+            margin-bottom: 20px
+            margin-right: 10px
+            &:hover
+                background-color: #fff
+            &_oneclick
+                color: #222
+                width: calc(50% + 28px)
+                margin-right: 10px
+                background-color: #fff
+                border: 1px solid #C4C4C4
+                transition: .3s border, .3s color 
+                &:hover
+                    border: 1px solid $accent
+        
+        &__like
+            width: 18px
+            height: 16px
+            background-position: center
+            background-repeat: no-repeat
+            transition: .3s background-image
+            background-size: contain
+            background-image: url(../images/dist/element/like_gray.svg)
+            margin-bottom: 20px
+            cursor: pointer
+            &:hover
+                background-image: url(../images/dist/element/like_red.svg)
+            &.active
+                background-image: url(../images/dist/element/like_red.svg)
+    &__installments
+        background-color: #E0E4F3
+        border-radius: 4px
+        height: 36px
+        line-height: 36px
+        text-align: center
+        color: #222
+        width: calc(50% + 28px)
+        display: block
+        font-weight: 500
+        margin-bottom: 20px
+
+
+    &-subscription
+        padding-left: 100px
+        position: relative
+        &__img
+            position: absolute
+            left: 0
+            top: 0
+        &__title
+            color: #000
+            line-height: 120%
+            margin-bottom: 15px
+        &__wrapper
+            display: flex
+            align-items: center
+        &__price
+            color: #222
+            font-size: 26px
+            line-height: 140%
+            font-weight: 500
+        &__btn
+            width: 58%
+            color: #fff
+            background-color: $red
+            padding-left: 5px
+            padding-right: 5px
+            border-radius: 4px
+            height: 36px
+            line-height: 36px
+            text-align: center
+            margin-left: auto
+            &:hover
+                color: #fff
+
+    &-stickyinfo
+        background-color: #F9F9F9
+        padding-top: 25px
+        padding-left: 25px
+        padding-right: 25px
+        padding-bottom: 30px
+        margin-left: 80px
+        &__title
+            font-size: 15px
+            line-height: 140%
+            font-weight: 500
+            margin-bottom: 5px
+        &-delivery
+            margin-bottom: 20px
+            &-item
+                display: flex
+                justify-content: space-between
+                color: #000
+                margin-bottom: 5px
+                &__title
+                    font-size: 13px
+                    font-weight: 300
+                    width: calc(30% - 20px)
+                &__text
+                    width: calc(70% - 20px)                    
+        &-payments
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-bottom: 20px
+            &-item
+                width: calc(25% - 5px)
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 30px
+                margin-bottom: 6px
+                border-radius: 4px
+                img
+                    max-width: 83%
+                    max-height: 80%
+
+        &-sberspasibo
+            display: flex
+            align-items: center
+            margin-bottom: 20px
+            &__img
+                height: 22px
+                margin-right: 25px
+            &__value
+                color: #1F8A70
+                font-size: 13px
+                span
+                    font-size: 26px
+                    font-weight: 500
+                    
+        &-actions
+            font-size: 13px
+            color: #000
+            margin-bottom: 20px
+            &__item
+                display: flex
+                margin-bottom: 7px
+                align-items: center
+                img
+                    margin-right: 10px
+                    max-height: 24px
+                &:last-child
+                    margin-bottom: 0
+                    img
+                        margin-right: 5px
+
+        &-socials
+            display: flex
+            &__item
+                display: flex
+                height: 25px
+                width: 25px
+                align-items: center
+                justify-content: center
+                margin-right: 8px
+                background-color: $accent
+                border-radius: 50%
+                img
+                    max-width: 65%
+                    max-height: 65%
+                    transition: 1s transform
+                &:hover
+                    background-color: $accent2
+                    img
+                        transform: rotateY(360deg)
+
+@media (max-width: 1640px)
+    .element
+        &-gallery
+            &-thumb
+                height: 350px
+                width: 80px
+            &-main
+                height: 380px
+                width: 380px
+                margin-left: 25px
+        &-sales
+            &-item
+                &__title
+                    max-width: 200px
+        &-subscription
+            &__price
+                font-size: 20px
+            &__btn
+                font-size: 12px
+        &-stickyinfo
+            margin-left: 10px
+            padding-left: 20px
+            padding-right: 20px
+        
+@media (max-width: 1299.98px)
+    .element
+        &-gallery
+            &-thumb
+                height: 230px
+                width: 50px
+            &-main
+                height: 205px
+                width: 205px
+                margin-left: 10px
+        &-topinfo
+            &-left-rating
+                margin-bottom: 0px
+                span
+                    font-size: 10px
+                &__stars
+                    padding-bottom: 7px
+                    img
+                        height: 12px
+            &-left-orders
+                font-size: 10px
+                margin-bottom: 15px
+                margin-bottom: 0px
+                img
+                    margin-right: 5px
+            &-left-props
+                font-size: 10px
+                margin-bottom: 15px
+            &-right
+                &__logo
+                    width: 80px
+                &__like
+                    margin-bottom: 16px
+                img
+                    width: 20px
+        &-sales
+            margin-bottom: 10px
+            &-item
+                padding-left: 10px
+                padding-right: 10px
+                &__date
+                    font-size: 10px
+                    min-width: auto
+                    height: 20px
+                    right: 10px
+                &__title
+                    font-size: 10px
+                    line-height: 130%
+                    max-width: 140px
+                    margin-top: 0px
+                    margin-bottom: 5px
+                &__text
+                    font-size: 10px
+                    line-height: 130%
+                &__icon
+                    width: 40px
+                    top: 10px
+                    left: 10px
+                    margin-right: 10px
+        &-prices
+            margin-bottom: 10px
+            &__old
+                font-size: 10px
+                line-height: 110%
+                margin-bottom: 5px
+            &__cur
+                font-size: 16px
+        
+        &-buttons
+            &-count
+                height: 21px
+                line-height: 21px
+                font-size: 10px
+                margin-bottom: 15px
+                span
+                    height: 19px
+                    line-height: 19px
+            &__item
+                width: calc(25% - 3px)
+                font-size: 10px
+                font-size: 10px
+                height: 21px
+                line-height: 21px
+                margin-bottom: 15px
+                &_oneclick
+                    width: 50%
+                    margin-bottom: 15px
+                    width: calc(50% + 35px)
+
+        &__installments
+            height: 21px
+            line-height: 21px
+            font-size: 10px
+            margin-bottom: 15px
+            width: calc(50% + 35px)
+
+        &-subscription
+            padding-left: 45px
+            &__title
+                font-size: 10px
+                line-height: 120%
+            &__img
+                width: 30px
+            &__wrapper
+                width: calc(100% + 45px)
+                margin-left: -45px
+            &__price
+                font-size: 16px
+                line-height: 140%
+            &__btn
+                font-size: 10px
+                line-height: 21px
+                height: 21px
+                width: 55%
+
+
+        &-stickyinfo
+            margin-left: 0
+            padding-left: 7px
+            padding-right: 7px
+            padding-top: 5px
+            padding-bottom: 10px
+            font-size: 10px
+            &__title
+                font-size: 10px
+            &-delivery
+                margin-bottom: 10px
+                &-item
+                    &__title
+                        font-size: 10px
+            &-payments
+                margin-bottom: 5px
+                &-item
+                    height: 17px
+            &-sberspasibo
+                &__img
+                    height: 11px
+                    margin-right: 6px
+                &__value
+                    font-size: 10px
+                    span
+                        font-size: 15px
+            &-actions
+                &__item
+                    font-size: 10px
+                    line-height: 115%
+            &-socials
+                &__item
+                    height: 18px
+                    width: 18px
+                    margin-right: 7px
+                    img
+                        max-width: 55%
+                        max-height: 55%
+
+@media (max-width: 991.98px)
+    .element
+        &_topinfo
+            &-left
+                &-props
+                    font-size: 10px
+        &-buttons
+            &-count
+                width: calc(33% - 10px)
+                span
+                    width: 19px
+                input
+                    width: calc(100% - 38px)
+            &__item
+                width: 33%
+                &_oneclick
+                    width: calc(66% + 35px)
+        &__installments
+            width: calc(66% + 35px)
+
+        &-sales
+            &-item
+                &__title
+                    max-width: 125px
+                &__icon
+                    margin-right: 7px
+                    display: none
+                &__date
+                    
+
+                
+    
+
+@media (max-width: 767.98px)
+    .element
+        &-gallery
+            &-wrapper
+                display: flex
+                flex-wrap: wrap
+            &-main
+                width: 100%
+                height: auto
+                margin-left: 0
+            &-thumb
+                width: 100%
+                height: 72px
+                &__wrapper
+                    margin-top: 0
+                    margin-bottom: 15px
+                    order: 1
+                    display: block
+                    max-width: calc(100vw - 30px)
+                    .swiper-button-prev,.swiper-button-next
+                        display: none
+                .swiper-slide
+                    min-width: 72px
+        &-topinfo
+            &-left
+                &-rating
+                    margin-right: 30px
+                &-orders
+                    margin-bottom: 5px
+            &-right
+                &__logo
+                    display: none
+                &__like
+                    display: none
+            &_mobile
+                display: flex
+                align-items: center
+                .element-topinfo-right__like
+                    display: inline-block
+                    margin-bottom: 0
+                    margin-left: auto
+        
+        &-info__wrapper
+            margin-bottom: 30px
+
+        &-sales
+            &-item
+                &__icon
+                    width: 28px
+                    margin-right: 15px
+                    display: block
+                &-info
+                    width: 100%
+                &__title
+                    max-width: calc(100% - 60px)
+                &__date
+                    height: 12px
+                    line-height: 12px
+                    font-size: 8px
+                    top: 5px
+                    right: 5px
+                    padding-left: 5px
+                    padding-right: 5px
+                    min-width: 54px
+        
+        &-prices
+            &__old
+                font-size: 12px
+                display: inline-block
+                margin-right: 23px 
+                margin-bottom: 0
+                vertical-align: middle
+            &__cur
+                font-size: 22px
+                display: inline-block
+                vertical-align: middle
+        
+        &-buttons
+            &__item
+                height: 30px
+                line-height: 30px
+                font-size: 12px
+            &-count
+                height: 30px
+                line-height: 30px
+                span
+                    height: 28px
+                    line-height: 28px
+                    width: 28px
+        
+        &__installments
+            height: 30px
+            line-height: 30px
+
+        &-subscription
+            padding-left: 64px
+            &__img
+                width: 44px
+                top: 6px
+                left: 0
+            &__title
+                margin-bottom: 5px
+                font-size: 12px
+            &__wrapper
+                margin-left: 0
+                width: 100%
+
+        &-stickyinfo
+            padding: 15px 10px
+            margin-bottom: 20px
+            margin-left: -10px
+            margin-right: -10px
+            &__title
+                font-size: 12px
+            &-delivery
+                &-item
+                    &__text
+                        width: 70%
+            &-sberspasibo
+                margin-bottom: 10px
+                &__img
+                    height: 13px
+                &__value
+                    span
+                        font-size: 22px
+            &-socials
+                &__item
+                    width: 25px
+                    height: 25px

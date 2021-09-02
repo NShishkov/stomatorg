@@ -1,0 +1,158 @@
+$animTime: .4s
+    
+.indexnav
+    margin-bottom: 90px
+    &__wrapper
+        padding-left: 5px
+        padding-right: 5px
+    &-card
+        margin-left: -5px
+        margin-right: -5px
+        background-color: $blue1
+        min-height: 250px
+        display: block
+        margin-bottom: 10px
+        box-sizing: border-box
+        padding-top: 20px 
+        padding-left: 15px
+        position: relative
+        overflow: hidden
+        z-index: 1
+        transition: $animTime background-color
+        &::before
+            transition: $animTime background-color
+            background-color: rgba(0,0,0,0)
+            content: ''
+            // display: block
+        &:hover
+            text-decoration: none
+            .indexnav-card__img
+                transform: scale(1.1)
+            .indexnav-card__title, .indexnav-card__subtitle
+                color: #fff
+            &::before
+                content: ''
+                position: absolute
+                // background-color: rgba(0,0,0,.15)
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: -1                
+        &_vert
+            min-height: 510px
+            padding-top: 80px
+            padding-left: 20px
+        &_hor
+            padding-left: 25px
+            padding-top: 40px
+        &_blue
+            background-color: $blue1
+            &:hover
+               background-color: $blue1_2 
+        &_blue2
+            background-color: $blue2
+            &:hover
+               background-color: $blue2_2 
+        &_blue3
+            background-color: $blue3
+            &:hover
+               background-color: $blue3_2 
+        &_blue4
+            background-color: $blue4
+            &:hover
+               background-color: $blue4_2 
+        &_green
+            background-color: $green
+            &:hover
+                background-color: $green_2
+        &_green2
+            background-color: $green2
+            &:hover
+                background-color: $green2_2
+
+        &__title
+            display: block
+            font-weight: 500
+            font-size: 22px
+            line-height: 140%
+            color: #000
+            max-width: 230px
+            display: block
+            margin-bottom: 8px
+            transition: $animTime color
+            z-index: 2
+        &__subtitle
+            font-size: 15px
+            line-height: 140%
+            font-weight: 300
+            display: block   
+            color: #000 
+            transition: $animTime color  
+        &__img
+            bottom: 0
+            right: 0
+            position: absolute
+            transition: $animTime transform
+            max-width: 100%
+            z-index: -1
+
+
+@media (max-width: 1640px)
+    .indexnav-card
+        min-height: 200px
+        padding-top: 20px
+        &_vert
+            min-height: 410px
+        &__img
+            max-height: 70%
+        &__title
+            font-size: 17px
+
+
+        
+@media (max-width: 1299.98px)
+    .indexnav-card
+        min-height: 150px
+        padding-top: 15px
+        &_vert
+            min-height: 310px
+        &__title
+            font-size: 12px
+            margin-bottom: 3px
+        &__subtitle
+            font-size: 13px
+
+@media (max-width: 991.98px)
+    .indexnav_mobile
+        margin-bottom: 20px
+        &-wrapper
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+    .indexnav
+        margin-bottom: 20px
+        &-card
+            width: 134px
+            height: 134px
+            min-height: auto
+            margin-left: 0
+            margin-right: 0
+            margin-bottom: 5px
+            padding-top: 15px
+            padding-left: 8px
+            &__title
+                font-size: 11px
+                margin-bottom: 0
+            &__subtitle
+                font-size: 10px
+                line-height: 1
+            &__img
+                max-height: 60%
+
+@media (max-width: 991.98px)
+    .indexnav
+        &-card
+            width: calc(50% - 2.5px)
+            &__title
+                font-size: 12px

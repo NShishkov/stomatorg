@@ -1,0 +1,122 @@
+.mobile_menu_overlay, .mobile_menu_container{
+	position: fixed;
+	top: 83px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 138px);
+}
+
+.mobile_menu_container, .mobile_menu_container ul li ul{
+	-webkit-transition: all 200ms;
+	-moz-transition: all 200ms;
+	transition: all 200ms;
+}
+.mobile_menu_overlay{
+	display: none;
+	cursor: pointer;
+	z-index: 10200;
+	background: rgba(0, 0, 0, 0.5);
+}
+.mobile_menu_container{
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	width: 100%;
+	overflow: hidden;
+	z-index: 10201;
+	background: #F9F9F9;
+}
+.mobile_menu_container.loaded{
+   	-webkit-transform: translateX(0px);
+   	transform: translateX(0px);
+}
+.mobile_menu_container .mobile_menu_content{
+	overflow: auto;
+	max-height: 100%;
+	padding-bottom: 30px;
+}
+.mobile_menu_container ul{
+	margin: 0;
+	padding: 0;
+}
+
+.mobile_menu_container ul li{
+	list-style: none;
+}
+.mobile_menu_container ul li a{
+	display: flex;
+    align-items: center;
+	padding: 15px 20px;
+	line-height: 17px;
+	font-size: 15px;
+	background: #F9F9F9;
+	color: #222;
+	text-decoration: none;
+	font-weight: bold;
+}
+.mobile-menu__icon{
+    width: 20px;
+    margin-right: 15px;
+    text-align: center;
+}
+.mobile-menu__icon img{
+    max-width: 100%;
+}
+.mobile_menu_container ul li a.parent{
+	padding-right: 50px;
+	background: #F9F9F9 url("../images/dist/header/arrow_right.svg") right 20px center no-repeat;
+	background-size: 7px;
+}
+.mobile_menu_container ul li a.parent:hover{
+	background: #F9F9F9 url("../images/dist/header/arrow_right.svg") right 20px center no-repeat;
+	background-size: 7px;
+}
+.mobile_menu_container ul li a.back{
+    min-height: 40px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    padding-right: 10px;
+	padding-left: 40px;
+	box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: $accent;
+	font-size: 15px;
+	font-weight: 500;
+	color: #fff;
+	position: relative;
+	text-align: center;
+}
+
+.mobile_menu_container ul li a.back img{
+	height: 18px;
+	width: 10px;
+	position: absolute;
+	top: 50%;
+	left: 17px;
+	margin-top: -9px;
+}
+
+.mobile_menu_container ul li a:hover{
+	background: #F9F9F9;
+}
+.mobile_menu_container ul li ul{
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #F9F9F9;
+	z-index: 2;
+}
+.mobile_menu_container ul li ul.loaded{
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+}
+.mobile_menu_container ul li ul.activity{
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+

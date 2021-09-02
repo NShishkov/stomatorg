@@ -1,22 +1,50 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
-$lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$accent: #00B5D3 // Accent Color
+$accent2: #00aece
+$fontsize: 15px // Body Font Size
+$textcolor: #222 // Text Color
+$lineheight: 1.4 // Document Line Height
+$userfont: Montserrat, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
-// Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px
-$gutter: $grid-gutter-width
 
-// IMPORT SECTION
+// COLORS
+$blue1: #88CDDC
+$blue1_2: #52A7C0
+$blue2: #BEDDF5
+$blue2_2: #6DA3CD
+$blue3: #7CB1D5
+$blue3_2: #4681AA
+$blue4: #A1CAE2
+$blue4_2: #5C93B4
+$green: #BCE6EB
+$green_2: #409CB9
+$green2: #9DC8D3
+$green2_2: #6296a5
+$green3: #1FAB7D
+$red: #E43535
+$gray: #F2F2F2
+$yellow: #FFBD17
+
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+ 
+// IMPORT SECTION 
+
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+// @import 'node_modules/bootstrap/scss/forms.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional/ Bootstrap Grid
+// @import 'node_modules/slick-carousel/slick/slick.scss'
+@import 'node_modules/wow.js/css/libs/animate.scss' 
+@import 'app/libs_external/magnific-popup/magnific-popup.scss'
+@import 'node_modules/overlayscrollbars/css/OverlayScrollbars.scss'
+@import 'node_modules/swiper/swiper-bundle.scss'
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
 
@@ -26,11 +54,18 @@ $gutter: $grid-gutter-width
 		font-style: $fstyle
 		font-weight: $fweight
 		src: url($furl) format('woff2')
+        font-display: swap
 
 @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
 @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
 @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
 @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+@include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2')
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2')
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2')
+@include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff2')
+@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -44,9 +79,9 @@ $gutter: $grid-gutter-width
 input, textarea
 	outline: none
 	&:focus:required:invalid
-		border-color: red
+		border-color: $red
 	&:required:valid
-		border-color: green
+		border-color: $accent
 
 body
 	font-family: $userfont
@@ -56,3 +91,112 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+
+*
+    box-sizing: border-box
+a
+    color: #000
+    transition: .3s color,.3s background-color
+    
+    &:hover
+        color: $accent
+        text-decoration: none
+
+.text-center
+    text-align: center
+
+
+
+
+.swiper-pagination-bullet-active
+	background-color: $accent
+
+.swiper-pagination-bullet:only-child
+    visibility: hidden
+
+
+
+.swiper-button-prev,.swiper-button-next
+    background: #DEDEDE
+    height: 44px
+    width: 44px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    opacity: .6
+    position: absolute
+    transition: .3s opacity
+    &:hover
+        opacity: 1
+    &.swiper-button-disabled
+        cursor: auto
+        &:hover
+            opacity: .6
+
+.swiper-button-prev
+    left: 10px
+    top: 50%
+    margin-top: -22px
+    padding-right: 2px
+    img
+        transform: rotate(180deg)
+.swiper-button-next
+    padding-left: 2px
+    right: 10px
+    top: 50%
+
+.swiper-button-next:after,.swiper-button-prev:after
+	display: none
+
+
+
+.swiper-container-vertical,.element-gallery-thumb__wrapper
+    .swiper-button-next,.swiper-button-prev
+        left: 50%
+        margin-left: -7.5px
+        width: 15px
+        height: 8px
+        border-radius: 0
+        padding: 0
+        margin-top: 0
+        background-color: transparent
+    .swiper-button-prev
+        top: -20px
+    .swiper-button-next
+        top: auto
+        bottom: -20px
+
+
+.swiper-wrapper.disabled 
+    transform: translate3d(0px, 0, 0) !important
+
+
+
+.hidden
+    display: none
+
+@media (min-width: 1640px)
+    .container
+        max-width: 1620px
+
+
+@media (max-width: 991.98px)
+
+    .swiper-button-prev,.swiper-button-next
+        height: 20px
+        width: 20px
+        margin-top: -10px
+        img
+            height: 9px
+
+
+@media (max-width: 767.98px) 
+    .container
+        max-width: 720px !important
+    
+    main
+        padding-top: 108px
+
+    body.fixed
+        overflow-y: hidden

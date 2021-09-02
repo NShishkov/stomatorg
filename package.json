@@ -28,6 +28,14 @@
 		"gulp-sass": "^4.1.0",
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-stylus": "^2.7.0",
+		"gulp-webp": "^4.0.1",
 		"webpack-stream": "^6.1.2"
+	},
+	"dependencies": {
+		"jquery": "^3.6.0",
+		"overlayscrollbars": "^1.13.1",
+		"slick-carousel": "^1.8.1",
+		"swiper": "^6.5.4",
+		"wow.js": "^1.2.2"
 	}
 }
