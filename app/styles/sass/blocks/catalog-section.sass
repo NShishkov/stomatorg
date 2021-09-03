@@ -4,9 +4,9 @@
     width: 100%
     &-item
         padding-top: 20px
-        padding-left: 15px
-        padding-right: 15px
-        padding-bottom: 5px
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: 13px
         border: 1px solid #DEDEDE
         color: #222
         position: relative
@@ -34,12 +34,12 @@
             border-radius: 4px
 
         &__img
-            margin-bottom: 15px
+            margin-bottom: 25px
             display: block
             margin-left: auto
             margin-right: auto
             max-width: 100%
-            height: 180px
+            height: 160px
             object-fit: contain
         &__name
             font-weight: 400
@@ -48,52 +48,64 @@
             text-align: left
             font-weight: 500
             font-size: 14px
-            line-height: 135%
+            line-height: 120%
             color: #222
             display: block
             transition: .3s color
-            margin-bottom: 8px
+            margin-bottom: 2px
             &:hover
                 text-decoration: none
                 color: $accent
         &__brand
             text-align: left
-            margin-bottom: 20px
+            margin-bottom: 14px
             font-size: 13px
-            color: #7d7d7d
-            min-height: 36px
+            color: #222
+            font-weight: 300
+            min-height: 34px
+            line-height: 135%
 
         &-price
             margin-bottom: 13px
             display: flex
             align-items: center
             &__oldprice
-                flex-basis: 40%
-                width: 40%
                 text-decoration-line: line-through
-                font-size: 14px
+                font-size: 13px
                 line-height: 120%
                 font-weight: 500
-                color: #4B4B4B
+                color: #ADADAD
             &__curprice
-                flex-basis: 60%
-                width: 60%
                 text-align: center
                 font-size: 18px
                 line-height: 120%
                 color: #E43535
                 font-weight: 500
-                margin-left: 10px
+                margin-right: 6px
             &__default
-                width: 100%
                 text-align-last: 
                 font-size: 18px
                 line-height: 120%
                 font-weight: 500
-                color: #4B4B4B
+                color: #222
+            &__discount
+                background-color: $red
+                color: #fff
+                font-weight: 500
+                font-size: 13px
+                line-height: 15
+                display: inline-flex
+                width: 44px
+                height: 24px
+                align-items: center
+                justify-content: center
+                border-radius: 10px 2px
+                margin-left: auto
+
         &-buy
             display: flex
-            margin-bottom: 12px
+            margin-bottom: 15px
+            align-items: center
             &__wrapper
                 flex-basis: 40%
                 width: 40%
@@ -121,23 +133,52 @@
                     color: #222
                     font-weight: 500
             &__btn
-                flex-basis: 60%
-                width: 60%
                 background-color: $accent
                 color: #fff
                 border-radius: 4px
                 height: 32px
-                line-height: 32px
+                line-height: 120%
                 font-weight: 500
                 text-align: center
-                display: block
-                width: 100%
-                margin-left: 10px
+                display: inline-flex
+                align-items: center
+                justify-content: center
                 transition: .3s background-color
+                margin-right: 10px
+                padding-left: 14px
+                padding-right: 14px
                 &:hover
                     background-color: $accent2
                     color: #fff
                     text-decoration: none
+                
+            &__oneclick
+                background-color: #F2F2F2
+                padding-left: 14px
+                padding-right: 14px
+                height: 32px
+                line-height: 120%
+                text-align: center
+                border-radius: 4px
+                color: #222
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                transition: .3s background-color, .3s color
+                font-weight: 500
+                margin-right: 10px
+            &__like
+                width: 22px
+                height: 22px
+                background-image: url(../images/dist/icons/like_nofill.svg)
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+                transition: .3s background-image
+                &:hover,&.active
+                   background-image: url(../images/dist/icons/like_fill.svg) 
+
+
         &-bot
             display: flex
             &__code
@@ -147,7 +188,6 @@
                 font-size: 13px
                 line-height: 130%
                 font-weight: 600
-                height: 32px
                 display: flex
                 align-items: center
                 span
@@ -157,14 +197,16 @@
                 width: 60%
                 flex-basis: 60%
                 display: flex
-                line-height: 130%
                 font-size: 13px
+                line-height: 13px
                 font-weight: 500
-                height: 32px
                 align-items: center
                 justify-content: flex-end
                 img
                     margin-right: 15px
+        
+        .badges
+            top: 14px
 
 .catalog-sidebar
     padding-right: 40px
@@ -344,9 +386,20 @@
             &__item
                 margin-right: 10px
 
-@media (max-width: 1299.98px)
+    .catalog-elements
+        &-item
+            width: calc(33.333% - 5px)
+            margin-right: 5px
+            margin-bottom: 5px
+            &:nth-child(3n)
+                margin-right: 0px
+            &:nth-child(4n)
+                margin-right: 5px
 
+@media (max-width: 1299.98px)
     .catalog
+        &-sidebar
+            padding-right: 0
         &-section
             &-item
                 padding-right: 10px
@@ -408,20 +461,21 @@
                 margin-right: 5px
     .catalog-elements
         &-item
-            width: calc(33.333% - 5px)
-            margin-right: 5px
-            margin-bottom: 5px
-            &:nth-child(3n)
-                margin-right: 0px
-            &:nth-child(4n)
-                margin-right: 5px
+            padding-left: 10px
+            padding-right: 10px
             &-price
                 &__oldprice
-                    font-size: 12px
+                    font-size: 11px
                 &__curprice
-                    font-size: 16px
+                    font-size: 14px
                 &__default
-                    font-size: 16px
+                    font-size: 14px
+            &-buy
+                &__btn,&__oneclick
+                    font-size: 14px
+                    margin-right: 5px
+                    padding-left: 10px
+                    padding-right: 10px
 
 
 @media (max-width: 991.98px)
@@ -466,27 +520,40 @@
 
     .catalog-elements
         &-item
-            padding-top: 13px
-            padding-left: 8px
-            padding-right: 8px
+            width: calc(50% - 3px)
+            &:nth-child(n+1)
+                margin-right: 5px
+            &:nth-child(2n)
+                margin-right: 0
+            &:nth-child(3n)
+                margin-right: auto
+            &__img
+                height: 125px
+                margin-bottom: 20px
+            &__name
+                font-size: 12px
+                line-height: 120%
+                text-overflow: ellipsis
+                height: 28px
             &__sale
                 top: 9px
                 right: 9px
-            &__name
-                font-size: 11px
-                text-overflow: ellipsis
-                line-height: 155%
             &__brand
                 font-size: 11px
                 margin-bottom: 5px
+                min-height: 28px
             &-price
                 &__oldprice
-                    font-size: 8px
+                    font-size: 10px
+                    margin-top: 3px
                 &__curprice
-                    font-size: 12px
-                    margin-left: 5px
+                    font-size: 16px
                 &__default
-                    font-size: 12px
+                    font-size: 16px
+                &__discount
+                    width: 34px
+                    height: 19px
+                    line-height: 19
             &-buy
                 margin-bottom: 8px
                 &__wrapper
@@ -498,53 +565,71 @@
                         width: 30px
                         height: 24px
                         line-height: 24px
-                &__btn
-                    height: 24px
-                    line-height: 24px
-                    font-size: 12px
+                &__btn,&__oneclick
+                    // font-size: 12px
+                &__like
+                    width: 18px
+                    height: 18px
             &-bot
                 align-items: center
-                &__code
-                    font-size: 10px
-                &__available
-                    font-size: 8px
-                    img
-                        margin-right: 5px
 
 @media (max-width: 767.98px)            
     .catalog
+        &-banners
+            display: none
         &-sections
             display: none
         &-banner
             display: none
-        &-elements
-            &-item
-                width: calc(50% - 3px)
-                &:nth-child(n+1)
-                    margin-right: 5px
-                &:nth-child(2n)
-                    margin-right: 0
-                &:nth-child(3n)
-                    margin-right: auto
-                &__name
-                    font-size: 10px
-                    line-height: 160%
-                &-price
-                    &__curprice,&__default
-                        font-size: 11px
-                &-buy
-                    &__btn
-                        font-size: 11px
         &-topfilter
             &-show
                 margin-left: auto
                 img
                    height: 26px
                    width: 26px 
+        
+        &-elements
+            &-item
+                .badges
+                    top: 8px
+                &-price
+                    margin-bottom: 7px
+                    &__discount
+                        margin-left: 5px
+                &-buy
+                    &__btn
+                        width: calc(50% - 14px)
+                    &__oneclick
+                        width: calc(50% - 14px)
+                    
+                    
 
 @media (max-width: 575.98px)
-    .catalog-elements-item__name
-        line-height: 120%
+    .catalog-elements
+        &-item
+            padding-left: 6px
+            padding-right: 6px
+            padding-bottom: 10px
+            width: 100%
+            &__img
+                height: 110px
+            &__name, &__brand
+                height: auto
+                min-height: auto
+            &__img
+
+           
+            &__name
+                line-height: 120%
+            &-bot
+                justify-content: space-between
+                &__code
+                    width: auto
+                    font-size: 10px
+                &__available
+                    width: auto
+                    font-size: 10px
+                    line-height: 10px
 
     .catalog
         &-section
@@ -565,6 +650,7 @@
                     &-bot
                         &__available
                             font-size: 8px
+                
                 &-form
                     flex-direction: row
                     width: 100%
