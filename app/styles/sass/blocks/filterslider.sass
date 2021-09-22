@@ -17,6 +17,7 @@
             position: relative
             img
                 margin-right: 10px
+                height: 25px
             &.active
                 &::after
                     position: absolute
@@ -194,22 +195,40 @@
         margin-right: 65px
 
 .swiper-button-prev__filterslider,.swiper-button-next__filterslider
-    background: #DEDEDE
-    height: 44px
-    width: 44px
+    height: 30px
+    width: 30px
     display: flex
     align-items: center
     justify-content: center
     border-radius: 50%
-    opacity: .6
+    opacity: 1
     position: absolute
-    transition: .3s opacity
+    transition: .3s opacity, .3s background, .3s border
+    border: 1px solid #222222
+    img:nth-child(2)
+        display: none
     &:hover
         opacity: 1
+        background: $accent
+        border: 1px solid $accent
+        cursor: pointer
+        img
+            &:nth-child(1)
+                display: none
+            &:nth-child(2)
+                display: block
+        
     &.swiper-button-disabled
         cursor: auto
-        &:hover
-            opacity: .6
+        background: #fff
+        border: 1px solid #222222
+        opacity: .6
+        img
+            &:nth-child(1)
+                display: block
+            &:nth-child(2)
+                display: none
+                    
 
 .swiper-button-prev__filterslider
     left: 10px
