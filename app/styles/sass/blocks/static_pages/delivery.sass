@@ -1,0 +1,89 @@
+.delivery
+    &__question
+        background-color: #F2F2F2
+        min-height: 38px
+        color: #222
+        border-radius: 4px
+        display: flex
+        align-items: center
+        font-weight: 500
+        padding-left: 45px
+        background-image: url(../images/dist/icons/question_blue.svg)
+        background-position: 14px center
+        background-repeat: no-repeat
+        transition: .3s background-color, .3s color
+        margin-bottom: 10px
+        position: relative
+        &::after
+            position: absolute
+            width: 10px
+            height: 5px
+            content: ''
+            display: block
+            background-image: url(../images/dist/icons/carret_black.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            right: 15px
+            top: calc(50% - 3px)
+            transition: .3s transform
+        &:hover
+            cursor: pointer
+            background-color: $accent
+            color: #fff
+            background-image: url(../images/dist/icons/question_white.svg)
+            &::after
+                background-image: url(../images/dist/icons/carret_white.svg)
+                // transform: rotate(180deg)
+        &.active
+            background-color: $accent
+            background-image: url(../images/dist/icons/question_white.svg)
+            color: #fff
+            &::after
+                transform: rotate(180deg)
+                background-image: url(../images/dist/icons/carret_white.svg)
+
+    &__answer
+        padding-left: 15px
+        opacity: 0
+        max-height: 0px
+        transition: 0s opacity
+        .iframe-wrapper
+            max-width: 100%
+            overflow: auto
+        &.active
+            opacity: 1
+            max-height: none
+            transition: .5s opacity
+            padding-bottom: 10px
+
+    &-tk
+        &-wrapper
+            display: flex
+            justify-content: space-between
+        
+        width: calc(50% - 10px)
+
+
+@media (max-width: 1299.98px)
+    .delivery
+        &-tk
+            width: 100%
+            margin-bottom: 30px
+            a
+                color: $accent
+            &-wrapper
+                flex-direction: column
+
+@media (max-width: 991.98px)
+    .delivery
+        &__question
+            font-size: 12px
+
+@media (max-width: 767.98px)
+    .delivery
+        &__question
+            font-size: 10px
+            min-height: 26px
+            background-size: 12px
+            padding-left: 28px
+            background-position: 8px center
