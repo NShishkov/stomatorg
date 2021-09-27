@@ -39,6 +39,7 @@
                 transition: .3s color
                 font-weight: normal
                 display: inline-block
+                white-space: nowrap
                 &:hover
                     color: $accent
                     text-decoration: none
@@ -68,7 +69,8 @@
         &__logo
             display: block
             img
-                max-width: 100%
+                max-width: 97%
+                width: 484px
         &-wrapper
             display: flex
         &__catalog
@@ -78,7 +80,7 @@
             align-items: center
             width: 170px
             margin-right: 4px
-            height: 62px
+            height: 56px
             border-radius: 4px
             font-size: 22px
             font-weight: 600
@@ -121,8 +123,9 @@
                 border-radius: 4px
                 
     &-contacts
+        margin-top: -2px
         &__phone
-            margin-bottom: 6px
+            margin-bottom: 4px
             z-index: 99
             width: 100%
             padding-left: 18px
