@@ -609,6 +609,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	if($(".catalog-banners .catalog-banner").length == 1) {
 		$('.catalog-banners .swiper-wrapper').addClass( "disabled" );
 	}
+	if($(".catalog-banners_mobile .catalog-banner").length == 1) {
+		$('.catalog-banners_mobile .swiper-wrapper').addClass( "disabled" );
+	}
+
 	var catalogSlider = new Swiper('.catalog-banners', {
 		loop: true,
 		autoHeight: true,
@@ -618,6 +622,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 		pagination: {
 			el: '.catalog-banners .swiper-pagination',
+			clickable: true,
+			dynamicBullets: true,
+		},
+		 
+	});
+	var catalogSlider = new Swiper('.catalog-banners_mobile', {
+		loop: true,
+		autoHeight: true,
+		autoplay: {
+			delay: 7000,
+			disableOnInteraction: true,
+		},
+		pagination: {
+			el: '.catalog-banners_mobile .swiper-pagination',
 			clickable: true,
 			dynamicBullets: true,
 		},

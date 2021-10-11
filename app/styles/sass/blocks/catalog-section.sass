@@ -213,6 +213,8 @@
 .catalog-banners
     padding-bottom: 30px
     margin-bottom: 10px
+    &_mobile
+        display: none
 .catalog-banner
     margin-bottom: 30px
 .swiper-wrapper.disabled
@@ -576,9 +578,11 @@
     .catalog
         &-banners
             display: none
+            &_mobile
+                display: block
+                padding-bottom: 30px
+                margin-bottom: 5px
         &-sections
-            display: none
-        &-banner
             display: none
         &-topfilter
             &-show
