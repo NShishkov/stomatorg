@@ -1,0 +1,180 @@
+.product-day-slider
+  padding-top: 15px
+  transform: translateY(-15px)
+  .swiper-button-prev, .swiper-button-next
+    opacity: 0
+    visibility: hidden
+    transition: .3s
+  &-item
+    padding-top: 40px
+    padding-bottom: 20px
+    padding-left: 17px
+    padding-right: 17px
+    position: relative
+    background: #FFFFFF
+    border: 1px solid #DEDEDE
+    &-productday
+      position: absolute
+      border-radius: 15px 4px
+      background: $orange
+      font-size: 14px
+      padding: 8px 15px
+      color: #fff
+      font-weight: bold
+      top: -15px
+      left: 11px
+      text-align: center
+      &:hover
+        color: #fff
+      &__timer
+    
+    &__discount
+      top: 10px 
+      right: 10px
+      position: absolute
+      background-color: $red
+      color: #fff
+      font-weight: 500
+      font-size: 13px
+      line-height: 15px
+      padding: 4px 7px
+      border-radius: 10px 2px
+
+    &__imgwrap
+      display: block
+      margin-bottom: 17px
+      text-align: center
+      img
+        height: 156px
+        max-width: 100%
+        width: auto
+        object-fit: contain
+
+    &__title
+      font-weight: 500
+      font-size: 14px
+      line-height: 120%
+      margin-bottom: 8px
+      display: block
+      max-height: 33.6px
+      overflow: hidden
+
+
+    &-prices
+      display: flex
+      align-items: center
+      margin-bottom: 17px
+      &__curprice,&__default
+        font-weight: 500
+        font-size: 17px
+        line-height: 120%
+        margin-right: 5px
+      &__curprice
+        color: $red
+      &__oldprice
+        text-decoration-line: line-through
+        font-size: 13px
+        line-height: 120%
+        font-weight: 500
+        color: #adadad
+
+    &-buttons
+      display: flex
+      justify-content: space-between
+      width: 100%
+      &__buy
+        width: calc(54% - 5px)
+        height: 32px
+        line-height: 32px
+        background-color: $accent
+        font-size: 15px
+        font-weight: 500
+        color: #fff
+        border-radius: 4px
+        text-align: center
+        &:hover
+          color: #fff
+      &__oneclick
+        width: calc(46% - 5px)
+        background-color: #F2F2F2
+        border-radius: 4px
+        height: 32px
+        line-height: 32px
+        font-size: 15px
+        font-weight: 500
+        color: #222222
+        border-radius: 4px
+        text-align: center
+
+  &:hover
+    .swiper-button-prev, .swiper-button-next
+      opacity: .6
+      visibility: visible
+
+
+@media (max-width: 1639.98px)
+  .product-day-slider
+    &-item
+      padding-top: 33px
+      padding-bottom: 10px
+      padding-left: 7px
+      padding-right: 7px
+      &-productday
+        font-size: 12px
+      &__title
+        max-height: 33.6px
+        overflow: hidden
+      &__imgwrap
+        img
+          height: 105px
+      &-prices
+        margin-bottom: 10px
+        &__curprice,&__default 
+          font-size: 14px
+        &__oldprice
+          font-size: 12px
+
+@media (max-width: 1299.98px)
+  .product-day-slider
+    &-item
+      padding-top: 22px
+      &__discount
+        right: 5px
+        top: 5px
+      &-productday
+        font-size: 10px
+        padding: 4px 7px
+        left: 5px
+      &__title
+        max-height: 29px
+        font-size: 12px
+      &__imgwrap
+        margin-bottom: 10px
+        img
+          height: 70px
+      &-prices
+        margin-bottom: 10px
+        &__curprice,&__default 
+          font-size: 14px
+        &__oldprice
+          display: none
+      &-buttons
+        &__buy,&__oneclick
+          font-size: 10px
+          height: 26px
+          line-height: 26px
+
+        
+@media (max-width: 991.98px)
+  .product-day-slider
+    padding-top: 25px
+    transform: translateY(0px)
+    margin-bottom: 12px
+    &-item
+      &-prices
+        &__oldprice
+          display: block
+
+@media (max-width: 767.98px)
+  .product-day-slider
+    margin-bottom: 20px

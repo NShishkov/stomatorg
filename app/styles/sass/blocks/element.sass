@@ -2,8 +2,8 @@
     &-gallery
         &-thumb
             display: inline-block
-            height: 430px
-            width: 100px
+            height: 390px
+            width: 90px
             .swiper-slide img
                 width: 100%
                 height: 100%
@@ -16,25 +16,61 @@
                 position: relative
         &-main
             vertical-align: top
-            height: 470px 
-            width: 470px
-            margin-left: 35px
+            height: 455px 
+            width: 455px
+            margin-left: 25px
             display: inline-block
             .swiper-slide
                 display: flex
                 align-items: center
                 justify-content: center
+                .badges-item
+                    height: 27px
+                    line-height: 27px
+                    padding-left: 10px
+                    padding-right: 10px
+                    border-radius: 0px
+                    font-weight: 500
+                    margin-left: 10px
             img
                 height: 95%
                 width: 95%
                 object-fit: contain
+    &-productday
+        border-radius: 4px
+        display: flex
+        align-items: center
+        padding-left: 25px
+        padding-right: 25px
+        padding-top: 10px
+        padding-bottom: 10px
+        background-color: $orange
+        margin-bottom: 25px
+        color: #fff
+        &__title
+            font-size: 16px
+            font-weight: 600
+            margin-right: 15px
+        &__descr
+            font-size: 12px
+            font-weight: 600
+            margin-right: 30px
+            margin-left: auto
+            br
+                display: none
+        &__timer
+            font-size: 22px
+            font-weight: 600
+            width: 91px
+
     &-info__wrapper
         vertical-align: top
         margin-bottom: 50px
+        margin-left: 40px
     &-topinfo
         display: flex
         &-left
-            width: calc(100% - 40px)
+            width: 100%
             &-rating
                 vertical-align: middle
                 display: inline-flex
@@ -50,17 +86,26 @@
             &-orders
                 vertical-align: middle
                 display: inline-flex
-                font-size: 13px
+                font-size: 14px
                 align-items: center
                 margin-bottom: 20px
                 color: #000
                 img
                     height: 13px
-                    margin-right: 11px
+                    margin-right: 7px
+            &-brand
+                img
+                    height: 52px
+                    max-width: 100%
+                    width: auto
+                    margin-bottom: 17px
+                    object-fit: contain
             &-props
-                font-size: 15px
-                margin-bottom: 30px
-                line-height: 1.7
+                font-size: 14px
+                margin-bottom: 10px
+                line-height: 1.4
+                &__item
+                    margin-bottom: 3px
                 b
                     font-weight: 600
         &-right
@@ -89,6 +134,38 @@
             &__cz
                 width: 34px
                 height: 35px
+    &-offers
+        &__title
+            font-size: 14px
+            font-weight: 500
+            margin-bottom: 10px
+        &-list
+            list-style-type: none
+            display: flex
+            flex-wrap: wrap
+            padding-left: 0
+            gap: 6px
+            margin-bottom: 16px
+            max-width: 395px
+            &-item
+                border: 1px solid #C0C0C0
+                box-sizing: border-box
+                border-radius: 4px
+                padding: 3px
+                &:hover
+                    cursor: pointer
+                &.active
+                    border: 2px solid $accent
+                    padding: 2px
+
+                img
+                    border-radius: 4px
+                    width: 36px
+                    height: 36px
+
+        &-select
+            max-width: 395px
+
     &-sales
         margin-bottom: 40px
         font-size: 13px
@@ -223,10 +300,10 @@
         line-height: 36px
         text-align: center
         color: #222
-        width: calc(50% + 28px)
+        width: 100%
         display: block
         font-weight: 500
-        margin-bottom: 20px
+        margin-bottom: 14px
 
 
     &-subscription
@@ -261,14 +338,70 @@
             margin-left: auto
             &:hover
                 color: #fff
+    
+    &-sticky
+        position: sticky
+        top: 20px
 
     &-stickyinfo
         background-color: #F9F9F9
-        padding-top: 25px
-        padding-left: 25px
-        padding-right: 25px
+        padding-top: 30px
+        padding-left: 45px
+        padding-right: 45px
         padding-bottom: 30px
-        margin-left: 80px
+        margin-left: 10px
+        &-prices
+            &__oldprice
+                font-size: 14px
+                color: #000
+                line-height: 140%
+                text-decoration-line: line-through
+                font-weight: 300
+                +
+                    .element-stickyinfo-prices__curprice
+                        color: $red
+            &__curprice
+                font-weight: 500
+                line-height: 140%
+                font-size: 26px
+        &__cheaper
+            display: flex
+            align-items: center
+            font-size: 14px
+            font-weight: 500
+            margin-bottom: 15px
+            img
+                margin-right: 10px
+            span
+                color: $red
+                text-decoration: underline
+        .element-buttons
+            &-count
+                width: 88px
+                margin-bottom: 14px
+                margin-right: 14px
+                input
+                    background-color: #F9F9F9
+            &__item
+                width: 140px
+                margin-bottom: 14px
+                margin-right: 14px
+                &_oneclick
+                    width: 100%
+                    margin-right: 0
+                    border-color: $accent
+            &__like
+                width: 25px
+                height: 25px
+                background-image: url('../images/dist/element/like_empty.svg')
+                &:hover,&.active
+                   background-image: url('../images/dist/element/like_blue.svg') 
+        &__devider
+            height: 1px
+            width: 100%
+            background: #DEDEDE
+            margin-top: 20px
+            margin-bottom: 20px
         &__title
             font-size: 15px
             line-height: 140%
@@ -276,13 +409,13 @@
             margin-bottom: 5px
         &-delivery
             margin-bottom: 20px
+            font-size: 14px
             &-item
                 display: flex
                 justify-content: space-between
                 color: #000
                 margin-bottom: 5px
                 &__title
-                    font-size: 13px
                     font-weight: 300
                     width: calc(30% - 20px)
                 &__text
@@ -319,20 +452,23 @@
                     font-weight: 500
                     
         &-actions
-            font-size: 13px
+            font-size: 14px
             color: #000
             margin-bottom: 20px
+            font-weight: 500
             &__item
                 display: flex
                 margin-bottom: 7px
                 align-items: center
+                text-decoration-line: underline
+                &:hover
+                    text-decoration-line: underline
                 img
                     margin-right: 10px
                     max-height: 24px
                 &:last-child
                     margin-bottom: 0
-                    img
-                        margin-right: 5px
+                
 
         &-socials
             display: flex
@@ -354,16 +490,34 @@
                     img
                         transform: rotateY(360deg)
 
-@media (max-width: 1640px)
+    &-configurations
+        width: 100%
+        tr
+            border-bottom: 1px solid #dedede
+            &:last-child
+                border: none
+        th
+            text-align: center
+            font-weight: 500
+        td,th
+            padding: 15px 20px
+            font-size: 14px
+            line-height: 120%
+        td:nth-child(3)
+            white-space: nowrap
+        .btn    
+            height: 30px
+            line-height: 30px
+@media (max-width: 1639.98px)
     .element
         &-gallery
             &-thumb
-                height: 350px
-                width: 80px
+                height: 330px
+                width: 75px
             &-main
-                height: 380px
-                width: 380px
-                margin-left: 25px
+                height: 355px
+                width: 355px
+                margin-left: 15px
         &-sales
             &-item
                 &__title
@@ -375,8 +529,21 @@
                 font-size: 12px
         &-stickyinfo
             margin-left: 10px
-            padding-left: 20px
-            padding-right: 20px
+            padding-left: 15px
+            padding-right: 15px
+            .element-buttons
+                &-count
+                    width: 80px
+                    margin-right: 10px
+                &__item
+                    width: 125px
+                    margin-right: 10px
+                    &_oneclick
+                        width: 100%
+                        margin-right: 0
+            &__cheaper-wrap
+                span
+                    display: block
         
 @media (max-width: 1299.98px)
     .element
@@ -385,27 +552,31 @@
                 height: 230px
                 width: 50px
             &-main
-                height: 205px
-                width: 205px
+                height: 270px
+                width: 270px
                 margin-left: 10px
+        &-productday
+            padding-left: 10px
+            padding: 10px
+            &__title
+                font-size: 11px
+                margin-right: 10px
+            &__descr
+                margin-right: 15px
+            &__timer
+                font-size: 19px
         &-topinfo
             &-left-rating
                 margin-bottom: 0px
-                span
-                    font-size: 10px
                 &__stars
                     padding-bottom: 7px
                     img
                         height: 12px
             &-left-orders
-                font-size: 10px
                 margin-bottom: 15px
                 margin-bottom: 0px
                 img
                     margin-right: 5px
-            &-left-props
-                font-size: 10px
-                margin-bottom: 15px
             &-right
                 &__logo
                     width: 80px
@@ -424,14 +595,11 @@
                     height: 20px
                     right: 10px
                 &__title
-                    font-size: 10px
+                    // font-size: 10px
                     line-height: 130%
-                    max-width: 140px
+                    max-width: 150px
                     margin-top: 0px
                     margin-bottom: 5px
-                &__text
-                    font-size: 10px
-                    line-height: 130%
                 &__icon
                     width: 40px
                     top: 10px
@@ -446,39 +614,9 @@
             &__cur
                 font-size: 16px
         
-        &-buttons
-            &-count
-                height: 21px
-                line-height: 21px
-                font-size: 10px
-                margin-bottom: 15px
-                span
-                    height: 19px
-                    line-height: 19px
-            &__item
-                width: calc(25% - 3px)
-                font-size: 10px
-                font-size: 10px
-                height: 21px
-                line-height: 21px
-                margin-bottom: 15px
-                &_oneclick
-                    width: 50%
-                    margin-bottom: 15px
-                    width: calc(50% + 35px)
-
-        &__installments
-            height: 21px
-            line-height: 21px
-            font-size: 10px
-            margin-bottom: 15px
-            width: calc(50% + 35px)
-
         &-subscription
             padding-left: 45px
-            &__title
-                font-size: 10px
-                line-height: 120%
+        
             &__img
                 width: 30px
             &__wrapper
@@ -488,9 +626,6 @@
                 font-size: 16px
                 line-height: 140%
             &__btn
-                font-size: 10px
-                line-height: 21px
-                height: 21px
                 width: 55%
 
 
@@ -498,16 +633,31 @@
             margin-left: 0
             padding-left: 7px
             padding-right: 7px
-            padding-top: 5px
+            padding-top: 10px
             padding-bottom: 10px
-            font-size: 10px
-            &__title
-                font-size: 10px
+            // font-size: 10px
+            &__devider
+                margin-top: 15px
+                margin-bottom: 15px
+            .element-buttons
+                &-count
+                    width: 70px
+                    margin-right: 5px
+                    span
+                        width: 23px
+                    input
+                        width: calc(100% - 46px)
+                &__item
+                    margin-right: 5px
+                    width: 102px
+                    &_oneclick
+                        width: 100%
+                &__like
+                    width: 20px
+                    height: 20px
+
             &-delivery
                 margin-bottom: 10px
-                &-item
-                    &__title
-                        font-size: 10px
             &-payments
                 margin-bottom: 5px
                 &-item
@@ -522,7 +672,7 @@
                         font-size: 15px
             &-actions
                 &__item
-                    font-size: 10px
+                    font-size: 13px
                     line-height: 115%
             &-socials
                 &__item
@@ -535,10 +685,45 @@
 
 @media (max-width: 991.98px)
     .element
-        &_topinfo
+        &-gallery
+            &-thumb
+                width: 70px
+                height: 310px
+            &-main
+                height: 330px
+                width: 330px
+                margin-left: 20px
+            &-wrapper
+                margin-bottom: 12px
+        &__installments
+            font-size: 12px
+            height: 27px
+            line-height: 27px
+
+        &-topinfo
             &-left
+                display: flex
+                flex-wrap: wrap
+                &-brand
+                    order: -1
+                    margin-right: 20px
+                    margin-bottom: 10px
+                    img
+                        height: 30px
+                        width: auto
+                        margin-right: 20px
+                        margin-bottom: 0
+                &__wrapper
+                     margin-bottom: 10px
                 &-props
-                    font-size: 10px
+                    font-size: 12px
+            
+                   
+        &-info
+            &__wrapper
+                margin-left: 0
+                margin-bottom: 0
+
         &-buttons
             &-count
                 width: calc(33% - 10px)
@@ -550,21 +735,73 @@
                 width: 33%
                 &_oneclick
                     width: calc(66% + 35px)
-        &__installments
-            width: calc(66% + 35px)
-
+                    margin-right: 0
         &-sales
             &-item
                 &__title
-                    max-width: 125px
+                    max-width: 310px
                 &__icon
                     margin-right: 7px
-                    display: none
                 &__date
+        
+        &-offers
+            &__title
+                font-size: 12px
+                margin-bottom: 6px
+            &-list
+                &-item
+                    padding: 2px
+                    img
+                        width: 22px
+                        height: 22px
+                    &.active
+                        border: 1px solid $accent
                     
+        &-stickyinfo
+            padding-left: 15px
+            padding-right: 15px
+            padding-bottom: 16px
+            &__title
+                font-size: 12px
+            &-prices
+                &__oldprice
+                    font-size: 12px
+                    font-weight: 300
+                &__curprice
+                    font-size: 16px
+                    font-weight: 500
+            &__cheaper
+                font-size: 12px
+                margin-bottom: 12px
 
-                
-    
+            .element-buttons
+                &__item
+                    margin-bottom: 8px
+                    height: 27px
+                    line-height: 27px
+                    font-size: 12px
+                    width: 87px
+                    &_oneclick
+                        margin-right: 0
+                        width: 100%
+                &-count
+                    margin-bottom: 8px
+                    height: 27px
+                    font-size: 12px
+                    span
+                        line-height: 25px
+                &__like
+                    margin-bottom: 10px
+            &-delivery
+                font-size: 12px
+
+            &-actions
+                &__item
+                    font-size: 12px
+
+        &-configurations
+            td, th
+                padding: 10px
 
 @media (max-width: 767.98px)
     .element
@@ -591,6 +828,8 @@
                     min-width: 72px
         &-topinfo
             &-left
+                &-brand
+                    width: 100%
                 &-rating
                     margin-right: 30px
                 &-orders
@@ -609,7 +848,7 @@
                     margin-left: auto
         
         &-info__wrapper
-            margin-bottom: 30px
+            margin-bottom: 15px
 
         &-sales
             &-item
@@ -676,8 +915,8 @@
         &-stickyinfo
             padding: 15px 10px
             margin-bottom: 20px
-            margin-left: -10px
-            margin-right: -10px
+            margin-left: 0px
+            margin-right: 0px
             &__title
                 font-size: 12px
             &-delivery
@@ -695,3 +934,46 @@
                 &__item
                     width: 25px
                     height: 25px
+
+        &-configurations
+            border-bottom: 1px solid #DEDEDE
+            tr
+                border-bottom: none
+                td:first-child
+                    font-weight: 500
+
+
+        &-sticky
+            z-index: 2
+
+            .element-stickyinfo
+                display: flex
+                height: 57px
+                align-items: center
+                justify-content: space-between
+                position: fixed
+                bottom: 60px
+                width: 100%
+                left: 0
+                padding-left: 10px 
+                padding-right: 10px
+                margin-left: 0
+                margin-right: 0
+                margin-bottom: 0
+                z-index: 3
+                &-delivery,&__devider,&__title,&-socials,&-actions,&-delivery,&__cheaper,.element-buttons__item_oneclick,.element__installments,ul.list
+                    display: none
+            .element-buttons
+                &-count
+                    margin-bottom: 0
+                &__item
+                    margin-bottom: 0
+                &__like
+                    margin-bottom: 0
+
+    .newfooter.element
+        padding-bottom: 145px
+
+
+    .element-stickyinfo-wrapper_mobile
+        order: -1

@@ -4,7 +4,6 @@ import WOW from 'wow.js'
 import Swiper from 'swiper/bundle'; 
 import {SwiperCore, Scrollbar, Pagination, Navigation, Autoplay, Controller} from 'swiper/core';
 
-
 window.jQuery = $
 window.$ = $
 
@@ -21,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	Swiper.use([Autoplay]);
 	Swiper.use([Controller]); 
 	// SET CONFIG END
-
-
 
 
 
@@ -67,23 +64,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 		// Отображаем нужное подменю
-		$('.newheader-catalog >ul >li').click(function(e){ 
-			// e.preventDefault();
-			$('.newheader-catalog >ul >li').removeClass('active');
-			$(this).addClass('active')
+		$('.newheader-catalog >ul >li').hover(function(e){ 
+			// e.preventDefault(); 
+			if ($(this).has('.newheader-catalog__wrap').length){
+				$('.newheader-catalog >ul >li').removeClass('active');
+				$(this).addClass('active')
+			}
 		})
 
-		// Отключаем ссылки первого уровня, если нет подменю
-		$('.newheader-catalog > ul > li > a').click(function(e){
-			if ($(this).siblings('.newheader-catalog__wrap').length){
-				e.preventDefault()
-			}
-		});
+		// Отключаем ссылки первого уровня, если есть подменю
+		// $('.newheader-catalog > ul > li > a').click(function(e){
+		// 	if ($(this).siblings('.newheader-catalog__wrap').length){
+		// 		e.preventDefault()
+		// 	}
+		// });
 
 		// Открытие меню первого уровня при двойном клике
-		$('.newheader-catalog > ul > li > a').dblclick(function(e){
-			window.location.assign($(this).attr('href'));
-		});
+		// $('.newheader-catalog > ul > li > a').dblclick(function(e){
+		// 	window.location.assign($(this).attr('href'));
+		// });
 
 
 
@@ -201,6 +200,50 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 
 	// SIDEBAR SLIDER END
+
+
+	// PRODUCT DAY SLIDER
+
+	// SIDEBAR SLIDER
+
+	// Вырубаем автоплей если 1 слайд
+	if($(".product-day-slider .product-day-slider-item").length == 1) {
+		$('.product-day-slider .swiper-wrapper').addClass( "disabled" );
+	}
+
+	var productDaySlider = new Swiper('.product-day-slider', {
+		loop: true,
+		
+		autoplay: {
+			delay: 7000,
+			disableOnInteraction: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next__productday',
+			prevEl: '.swiper-button-prev__productday',
+		},
+		breakpoints: {
+			320: {
+			slidesPerView: 1,
+			spaceBetween: 0
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 10
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			992: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			},
+		}
+		
+	});
+
+	// PRODUCT DAY SLIDER END
  
 
 
@@ -516,11 +559,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	// ФИКС ПЛАШКА СПРАВА
 	if ($('.element-stickyinfo').length){
 		$(window).scroll(function(){
-			stickyInfoCard();
+			// stickyInfoCard();
 		})
 
 		$(window).resize(function(){
-			stickyInfoCard();
+			// stickyInfoCard();
 		})
 	}
 
@@ -598,10 +641,21 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	// Слайдер с основной картинкой END
 
+
+	// Если находимся в карточке товара - накинуть класс на футер
+	if ($('.element-stickyinfo').length){
+		$('.newfooter').addClass('element')
+	}
+
+
+
 	// ELEMENT FUNCTIONS END
 
 
 	// SECTION FUNCTION
+
+	//the product of a day function
+	$('.catalog-elements-item-productday__timer,.product-day-slider-item-productday__timer,.element-productday__timer').countdown({compact: true, description: '',until: new Date(new Date().setHours(24,0,0,0))});
 
 	// CATALOG SLIDER
 
@@ -654,7 +708,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.tabs-list__item, .tabs-content-item').removeClass('active')
 		$(this).addClass('active')
 		$('#'+id).addClass('active')
-		stickyInfoCard()
+		if ($(window).width() < 768){
+			$('html').animate({ 
+				scrollTop: $('#'+id).offset().top - 90
+			}, 500 
+			);
+		}
+		// stickyInfoCard()
 	});
 	// TABS NAV END
 
@@ -708,8 +768,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	// ACCORDION
-	$('.accordion').click(function(){
-		$(this).toggleClass('open')
+	$('.accordion__title').click(function(){
+		$(this).closest('.accordion').toggleClass('open')
 	})
 	// ACCORDION END
 

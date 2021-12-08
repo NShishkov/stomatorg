@@ -32,6 +32,14 @@
                     &:hover
                         
     &-main
+        .swiper-button-prev, .swiper-button-next
+            visibility: hidden
+            opacity: 0
+            transition: .3s
+        &:hover
+            .swiper-button-prev, .swiper-button-next
+                visibility: visible
+                opacity: .6
 
 
 @media (max-width: 1639.98px)
@@ -60,11 +68,6 @@
                 img
                     height: 147px
 
-@media (max-width: 767.98px)
-    .topslider
-        margin-bottom: 20px
-        &-main
-            margin-bottom: 10px
         &-buttons
             display: flex
             justify-content: space-between
@@ -76,9 +79,11 @@
                 align-items: center
                 justify-content: center
                 font-size: 10px
-                line-height: 115%
+                line-height: 120%
                 color: #fff
                 background-color: $accent
+                padding-left: 5px
+                padding-right: 5px
                 &_blue
                     background-color: $blue3_2
                 &_red
@@ -86,6 +91,13 @@
                 &:hover
                     color: #fff
 
+
+@media (max-width: 767.98px)
+    .topslider
+        margin-bottom: 20px
+        &-main
+            margin-bottom: 10px
+        
 
 @keyframes shine
 	100% 

@@ -218,34 +218,32 @@ ol
     &-list
         list-style-type: none
         display: flex
-        border-bottom: 2px solid #F1F2F6
         color: #222
         padding-left: 0px
         margin-bottom: 30px
+        width: 100%
+        background-color: $gray
+        border-radius: 10px 20px 0px 0px
+        gap: 0px 40px
         &__item
-            font-size: 18px
+            font-size: 14px
             line-height: 18px
+            height: 37px
             font-weight: 500
-            padding-bottom: 13px
-            padding-left: 30px
-            padding-right: 30px
+            padding-left: 20px
+            padding-right: 20px
             display: inline-flex
             align-items: center
             position: relative
             img
                 margin-right: 13px
+                display: none
             &.active
+                border-radius: 10px 20px 0px 0px
+                background-color: $accent
+                color: #fff
                 &:hover
                     cursor: auto
-                &::after
-                    position: absolute
-                    width: 100%
-                    content: ''
-                    height: 4px
-                    background-color: $accent
-                    bottom: -3px
-                    left: 0
-                    border-radius: 2px
             &:hover
                 cursor: pointer
     &-content
@@ -263,6 +261,7 @@ ol
                 margin-bottom: 0
             img,iframe
                 max-width: calc(100% - 20px)
+                height: auto
     &-characteristics
         list-style-type: none
         padding-left: 0
@@ -354,7 +353,24 @@ ol
             &:hover
                 color: #fff
 
-
+.form-select
+    display: block
+    width: 100%
+    padding: .375rem 2.25rem .375rem .75rem
+    -moz-padding-start: calc(0.75rem - 3px)
+    color: #212529
+    background-color: #fff
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e")
+    background-repeat: no-repeat
+    background-position: right .75rem center
+    background-size: 16px 12px
+    border: 1px solid #DEDEDE
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    appearance: none   
+    margin-bottom: 15px
+    &:focus
+        border: 1px solid $accent
+        outline: none
 
 
 .select-buttons
@@ -456,8 +472,13 @@ ol
             background-color: $red
         &.yellow
             background-color: $yellow
+            color: #000
         &.green
             background-color: $green3
+        &.blackfriday
+            background-color: #ffc947 
+            color: #262629 
+
     
 
 .sidebar-banners
@@ -483,13 +504,26 @@ ol
         padding-right: 10px
 
 @media (max-width: 991.98px)
-    h2
+    h1
         font-size: 14px
+    h2
+        font-size: 12px
 
     h4
         font-size: 12px
         line-height: 15px
         margin-bottom: 15px
+
+
+    p,ul,ol, select
+        font-size: 12px
+
+    p.big
+        font-size: 13px
+
+    ul.list
+        li
+            font-size: 12px
 
 
     .atention
@@ -517,20 +551,19 @@ ol
 
     .tabs
         &-list
+            flex-direction: column
+            border-radius: 4px
+            background-color: transparent
             &__item
                 font-size: 15px
+                white-space: nowrap
                 padding-left: 15px
                 padding-right: 15px
-    
-    p,ul,ol
-        font-size: 10px
-
-    p.big
-        font-size: 12px
-
-    ul.list
-        li
-            font-size: 12px
+                background-color: #f9f9f9
+                border-radius: 4px
+                margin-bottom: 3px
+                &.active
+                    border-radius: 4px
 
     .catalog
         &-sections
@@ -585,9 +618,14 @@ ol
 
     h4
         margin-bottom: 10px
+
+    
         
 
     .tabs
+        margin-top: 0px
+        display: flex
+        flex-direction: column
         &-list
             margin-bottom: 10px
             &__wrapper
@@ -598,7 +636,6 @@ ol
                 font-size: 12px
                 line-height: 120%
                 position: relative
-                margin-bottom: 0
         &-content
             margin-bottom: 20px
 
