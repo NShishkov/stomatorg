@@ -204,8 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// PRODUCT DAY SLIDER
 
-	// SIDEBAR SLIDER
-
 	// Вырубаем автоплей если 1 слайд
 	if($(".product-day-slider .product-day-slider-item").length == 1) {
 		$('.product-day-slider .swiper-wrapper').addClass( "disabled" );
@@ -244,6 +242,31 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// PRODUCT DAY SLIDER END
+
+
+	// PRODUCT DAY SIDEBAR SLIDER
+
+	// Вырубаем автоплей если 1 слайд
+	if($(".productday-sidebar-slider .productday-sidebar-slider-item").length == 1) {
+		$('.productday-sidebar-slider .swiper-wrapper').addClass( "disabled" );
+	}
+
+	var productDaySidebarSlider = new Swiper('.productday-sidebar-slider', {
+		loop: true,
+		
+		autoplay: {
+			delay: 7000,
+			disableOnInteraction: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next__productday_sidebar',
+			prevEl: '.swiper-button-prev__productday_sidebar',
+		},
+
+		
+	});
+
+	// PRODUCT DAY SIDEBAR SLIDER END
  
 
 
@@ -655,7 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// SECTION FUNCTION
 
 	//the product of a day function
-	$('.catalog-elements-item-productday__timer,.product-day-slider-item-productday__timer,.element-productday__timer').countdown({compact: true, description: '',until: new Date(new Date().setHours(24,0,0,0))});
+	$('.catalog-elements-item-productday__timer,.product-day-slider-item-productday__timer,.element-productday__timer,.productday-sidebar-slider-item-productday__timer').countdown({compact: true, description: '',until: new Date(new Date().setHours(24,0,0,0))});
 
 	// CATALOG SLIDER
 
