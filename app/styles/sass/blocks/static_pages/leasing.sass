@@ -1,0 +1,268 @@
+.leasing
+  &-head
+    padding: 50px 40px
+    background-image: url('../images/dist/leasing/leasing_bg.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    margin-bottom: 70px
+    &__title
+      font-weight: 500
+      line-height: 22px
+      font-size: 18px
+      color: #000
+      margin-bottom: 10px
+    &__text
+      font-size: 14px
+      font-weight: 300
+      line-height: 140%
+      color: #000
+      max-width: 705px
+
+  &-advantages
+    margin-bottom: 70px
+    &__title
+      font-size: 18px
+      font-weight: 500
+      line-height: 22px
+      color: #000
+      margin-bottom: 25px
+    &__wrapper
+      display: flex
+      justify-content: space-around
+    &-item
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__icon
+        margin-bottom: 20px
+        height: 80px
+      &__title
+        font-size: 15px
+        line-height: 18px
+        font-weight: 500
+
+
+  &-conditions
+    border: 1px solid #DEDEDE
+    padding: 20px 25px
+    padding-right: 10px
+    padding-bottom: 13px
+    position: relative
+    display: flex
+    margin-bottom: 60px
+    &__title
+      font-size: 18px
+      font-weight: 500
+      line-height: 120%
+      color: #222
+      padding-right: 30px
+      padding-left: 2px
+      padding-bottom: 10px
+      position: absolute
+      top: -11px
+      left: -1px
+      background: #fff
+    &__list
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 0px
+      flex-basis: 33.33%
+      flex-direction: column
+      padding-right: 5px
+      li
+        margin-bottom: 7px !important
+        font-weight: 300
+
+  &-textblock
+    max-width: 460px
+    margin-bottom: 45px
+    &__title
+      color: #222
+      font-weight: 500
+      line-height: 140%
+      margin-bottom: 10px
+    &:last-child
+      margin-bottom: 100px
+
+
+  &-form
+    max-width: 620px
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15)
+    border-radius: 4px
+    margin-bottom: 100px
+    &-head
+      background-color: $gray
+      padding-top: 13px
+      padding-bottom: 17px
+      padding-left: 25px
+      padding-right: 25px
+      &__title
+        color: $accent
+        font-size: 22px
+        line-height: 120%
+        font-weight: 500
+        margin-bottom: 3px
+      &__subtitle
+        font-size: 13px
+        font-weight: 300
+        line-height: 120%
+        margin-bottom: 0
+    &-body
+      padding-top: 20px
+      padding-left: 25px
+      padding-right: 25px
+      padding-bottom: 35px
+      .form-group
+        margin-bottom: 18px
+        input[type='text']
+          background: #FFFFFF
+          border: 1px solid #DEDEDE
+          border-radius: 4px
+          height: 36px
+          padding-left: 13px
+          width: 100%
+          &::placeholder
+            color: #7D7D7D
+        textarea
+          background: #FFFFFF
+          border: 1px solid #DEDEDE
+          border-radius: 4px
+          min-height: 72px
+          padding-left: 13px
+          width: 100%
+          &::placeholder
+            color: #7D7D7D
+
+  &-example
+    &__title
+      color: $accent
+      font-size: 18px
+      font-weight: 500
+      line-height: 120%
+      margin-bottom: 30px
+    &__table
+      width: 100%
+      margin-bottom: 70px
+      td
+        padding: 3px
+        font-size: 14px
+        line-height: 120%
+        font-weight: 300
+        color: #000
+        &:first-child
+          width: 60%
+        &:nth-child(2)
+          font-weight: 500
+        &.blue
+          color: $accent
+    &__table2
+      width: calc(100% - 30px)
+      margin-left: 30px
+      font-size: 14px
+      border: 1px solid #dedede
+      thead,tfoot
+        background: $gray
+        font-weight: 500
+      tbody
+        tr:first-child
+          font-weight: 500
+      tfoot
+        td:first-child
+          text-align: left
+      td,th
+        width: 50px
+        padding: 8px
+        text-align: center
+        border-bottom: 1px solid #dedede
+        &:first-child
+          border-right: 1px solid #dedede
+      
+  &-info
+    max-width: 100%
+
+@media (max-width: 1639.98px)
+  .leasing
+    &-head
+      &__text
+        max-width: 640px  
+
+@media (max-width: 1299.98px)
+  .leasing
+    &-head
+      background-position: right center
+      padding: 25px 20px
+      position: relative
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: rgba(255,255,255,.80)
+        z-index: -1
+        
+    &-advantages
+      &-item
+        padding-left: 5px
+        padding-right: 5px
+        &__title
+          text-align: center
+        &__icon
+          height: 50px
+
+@media (max-width: 991.98px)
+  .leasing
+    &-head,&-advantages,&-conditions,&-form,&-textblock,&-textblock:last-child,
+    &-example__table,&-info
+      margin-bottom: 50px
+
+@media (max-width: 767.98px)
+  .leasing
+    &-head
+      &__title
+        font-size: 12px
+    &-advantages
+      &__title
+        font-size: 16px
+    &-conditions
+      &__title
+        font-size: 16px
+    &-form
+      &-head
+        &__title
+          font-size: 16px
+    &-example
+      &__title
+        font-size: 12px
+        margin-bottom: 10px
+      &__table2
+        margin-left: 0
+        width: 100%
+
+@media (max-width: 575.98px)
+  .leasing
+    &-head
+      padding-left: 0px
+      padding-right: 0px
+
+      padding-top: 20px
+    &-advantages
+      &__wrapper
+        flex-wrap: wrap
+        flex-direction: column
+      &-item
+        margin-bottom: 35px
+        &:last-child
+          margin-bottom: 0
+        &__icon
+          margin-bottom: 15px
+
+    &-conditions
+      display: flex
+      flex-direction: column
+      &__list
+        flex-basis: 100%
