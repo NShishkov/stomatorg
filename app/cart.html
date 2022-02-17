@@ -31,34 +31,41 @@
             <a href="#" class="cart__back"><img src="./images/dist/icons/back_blue.svg" alt="Назад">Вернуться к покупкам</a>
             <a href="#" class="cart__clear"><img src="./images/dist/icons/trash_blue.svg" alt="Очистить корзину">Очистить корзину</a>
         </div>
+
         <div class="col-xl-9">
             <div class="cart-alert">
                 <div class="cart-alert__text">
                     Внимание! В вашем заказе есть товар, который в данный момент отсутствует на складе
                 </div>
                 <div class="cart-alert-buttons">
-                    <a href="#" class="cart-alert-buttons__item cart-alert-buttons_agree" onclick="$('.cart-alert').fadeOut(300)">Я согласен ждать</a>
+                    <!-- <a href="#" class="cart-alert-buttons__item cart-alert-buttons_agree" onclick="$('.cart-alert').fadeOut(300)">Я согласен ждать</a> -->
                     <a href="#" class="cart-alert-buttons__item cart-alert-buttons_wishlist">Отложить</a>
                 </div>
             </div>
+        </div>
 
+        <div class="col-xl-9">
+            
             <div class="cart-wrapper">
 
                 <!-- ITEM 1 -->
-                <div class="cart-element">
+                <div class="cart-element red">
                     <div class="cart-element__img">
                         <img src="./images/dist/cart/item1.jpg" alt="item">
                     </div>
 
                     <div class="cart-element-info">
-                        <div class="cart-element-info__alert d-none d-lg-block">
-                            <span>Внимание!</span> Анестетики карпульные (растворы для инъекций) отпускаются только организациям строго при наличии лицензии на медицинскую деятельность.
-                        </div>
+
                         <div class="cart-element-info-wrapper">
-                            <div class="cart-element-info-wrapper-name">
-                                <div class="cart-element-info__alert d-block d-lg-none">
-                                    <span>Внимание!</span> Анестетики карпульные (растворы для инъекций) отпускаются только организациям строго при наличии лицензии на медицинскую деятельность.
+
+                            <div class="cart-element-info-wrapper-price d-block d-lg-none">
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                  4 444 870 руб.
                                 </div>
+                            </div>
+
+                            <div class="cart-element-info-wrapper-name">
+
                                 <div class="cart-element-info-wrapper-name__main">
                                     Анестетик карпульный Артикаин без адреналина, 
                                     раствор для инъекций (20 мг/мл 1,7 мл), картриджи по 1,7 мл 10 штук
@@ -75,17 +82,11 @@
                             </div>
                             <div class="cart-element-info-wrapper-price d-none d-lg-block">
                                 <div class="cart-element-info-wrapper-price_curprice">
-                                    870 руб.
+                                    4 444 870 руб.
                                 </div>
                             </div>
                             <div class="cart-element-info-wrapper-amount">
                                 
-                                <div class="cart-element-info-wrapper-price d-block d-lg-none">
-                                    <div class="cart-element-info-wrapper-price_curprice">
-                                        870 руб.
-                                    </div>
-                                </div>
-
                                 <div class="basket-item-block-amount">
                                     <span class="basket-item-amount-btn-minus" onclick="setQuantity(1417017, 1, 'down', false);"></span>
                                     <div class="basket-item-amount-filed-block">
@@ -96,10 +97,12 @@
                                 </div>
                             </div>
                             <a href='#' class="cart-element-info-wrapper__delete">
-                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-none d-lg-block">
-                                <img src="./images/dist/icons/close_gray.svg" alt="delete" class="d-flex d-lg-none">
+                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-lg-block">
                             </a>
                         </div>
+                    </div>
+                    <div class="cart-element__alert">
+                        Анестетики карпульные (растворы для инъекций) отпускаются только организациям строго при наличии лицензии на медицинскую деятельность
                     </div>
                 </div>
                 <!-- ITEM 1 END -->
@@ -113,6 +116,13 @@
                     <div class="cart-element-info">
                         
                         <div class="cart-element-info-wrapper">
+
+                            <div class="cart-element-info-wrapper-price d-block d-lg-none">
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                    870 руб.
+                                </div>
+                            </div>
+
                             <div class="cart-element-info-wrapper-name">
                                 <div class="cart-element-info-wrapper-name__main">
                                     Слюноотсосы BLOSSOM без фталатов, 100 шт., 15 см, 
@@ -135,12 +145,6 @@
                             </div>
                             <div class="cart-element-info-wrapper-amount">
 
-                                <div class="cart-element-info-wrapper-price d-block d-lg-none">
-                                    <div class="cart-element-info-wrapper-price_curprice">
-                                        870 руб.
-                                    </div>
-                                </div>
-
                                 <div class="basket-item-block-amount">
                                     <span class="basket-item-amount-btn-minus" onclick="setQuantity(1417017, 1, 'down', false);"></span>
                                     <div class="basket-item-amount-filed-block">
@@ -151,16 +155,15 @@
                                 </div>
                             </div>
                             <a href='#' class="cart-element-info-wrapper__delete">
-                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-none d-lg-block">
-                                <img src="./images/dist/icons/close_gray.svg" alt="delete" class="d-flex d-lg-none">
+                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-lg-block">
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- ITEM 2 END -->
 
-                 <!-- ITEM 3 -->
-                 <div class="cart-element">
+                <!-- ITEM 3 -->
+                <div class="cart-element">
                     <div class="cart-element__img">
                         <img src="./images/dist/cart/item3.jpg" alt="item">
                     </div>
@@ -168,6 +171,76 @@
                     <div class="cart-element-info">
                         
                         <div class="cart-element-info-wrapper">
+                            
+                            <div class="cart-element-info-wrapper-price d-block d-lg-none">
+                                <div class="cart-element-info-wrapper-price_oldprice">
+                                    200 руб.
+                                </div>
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                    160 руб.
+                                </div>
+                            </div>
+
+                            <div class="cart-element-info-wrapper-name">
+                                <div class="cart-element-info-wrapper-name__main">
+                                    Маска медицинская лицевая защитная 3-х слойная на резинке, 
+                                    цвет голубой 50 шт. в упаковке
+                                </div>
+                                <div class="cart-element-info-wrapper-name-bot">
+                                    <div class="cart-element-info-wrapper-name-bot__code">
+                                        <span>Код: </span>100798
+                                    </div>
+                                    <div class="cart-element-info-wrapper-name-bot__availability">
+                                        <span class="marker green"></span>В наличии на складе
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="cart-element-info-wrapper-price d-none d-lg-block">
+                                <div class="cart-element-info-wrapper-price_oldprice">
+                                    200 руб.
+                                </div>
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                    160 руб.
+                                </div>
+                            </div>
+                            <div class="cart-element-info-wrapper-amount">
+                                <div class="basket-item-block-amount">
+                                    <span class="basket-item-amount-btn-minus" onclick="setQuantity(1417017, 1, 'down', false);"></span>
+                                    <div class="basket-item-amount-filed-block">
+                                        <input class="basket-item-amount-filed js-quantity" type="text" id="QUANTITY_INPUT_14170172" name="QUANTITY_INPUT_14170172" value="5" data-ratio="1" onchange="updateQuantity('QUANTITY_INPUT_14170172', '1417017', 1, false)">
+                                        <input type="hidden" id="QUANTITY_1417017" name="QUANTITY_1417017" value="5">
+                                    </div>
+                                    <span class="basket-item-amount-btn-plus" onclick="setQuantity(1417017, 1, 'up', false);"></span>
+                                </div>
+                            </div>
+                            <a href='#' class="cart-element-info-wrapper__delete">
+                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-lg-block">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ITEM 3 END -->
+
+                <!-- ITEM 3 -->
+                <div class="cart-element">
+                    <div class="cart-element__img">
+                        <img src="./images/dist/cart/item3.jpg" alt="item">
+                    </div>
+
+                    <div class="cart-element-info">
+                        
+                        <div class="cart-element-info-wrapper">
+
+                            <div class="cart-element-info-wrapper-price d-block d-lg-none">
+                                <div class="cart-element-info-wrapper-price_oldprice">
+                                    200 руб.
+                                </div>
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                    160 руб.
+                                </div>
+                            </div>
+
                             <div class="cart-element-info-wrapper-name">
                                 <div class="cart-element-info-wrapper-name__main">
                                     Маска медицинская лицевая защитная 3-х слойная на резинке, 
@@ -193,14 +266,66 @@
                             </div>
                             <div class="cart-element-info-wrapper-amount">
 
-                                <div class="cart-element-info-wrapper-price d-block d-lg-none">
-                                    <div class="cart-element-info-wrapper-price_oldprice">
-                                        200 руб.
+                                <div class="basket-item-block-amount">
+                                    <span class="basket-item-amount-btn-minus" onclick="setQuantity(1417017, 1, 'down', false);"></span>
+                                    <div class="basket-item-amount-filed-block">
+                                        <input class="basket-item-amount-filed js-quantity" type="text" id="QUANTITY_INPUT_14170172" name="QUANTITY_INPUT_14170172" value="5" data-ratio="1" onchange="updateQuantity('QUANTITY_INPUT_14170172', '1417017', 1, false)">
+                                        <input type="hidden" id="QUANTITY_1417017" name="QUANTITY_1417017" value="5">
                                     </div>
-                                    <div class="cart-element-info-wrapper-price_curprice">
-                                        160 руб.
+                                    <span class="basket-item-amount-btn-plus" onclick="setQuantity(1417017, 1, 'up', false);"></span>
+                                </div>
+                            </div>
+                            <a href='#' class="cart-element-info-wrapper__delete">
+                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-lg-block">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ITEM 3 END -->
+
+                <!-- ITEM 3 -->
+                <div class="cart-element">
+                    <div class="cart-element__img">
+                        <img src="./images/dist/cart/item3.jpg" alt="item">
+                    </div>
+
+                    <div class="cart-element-info">
+                        
+                        <div class="cart-element-info-wrapper">
+
+                            <div class="cart-element-info-wrapper-price d-block d-lg-none">
+                                <div class="cart-element-info-wrapper-price_oldprice">
+                                    200 руб.
+                                </div>
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                    160 руб.
+                                </div>
+                            </div>
+                            
+                            <div class="cart-element-info-wrapper-name">
+                                <div class="cart-element-info-wrapper-name__main">
+                                    Маска медицинская лицевая защитная 3-х слойная на резинке, 
+                                    цвет голубой 50 шт. в упаковке
+                                </div>
+                                <div class="cart-element-info-wrapper-name-bot">
+                                    <div class="cart-element-info-wrapper-name-bot__code">
+                                        <span>Код: </span>100798
+                                    </div>
+                                    <div class="cart-element-info-wrapper-name-bot__availability">
+                                        <span class="marker green"></span>В наличии на складе
                                     </div>
                                 </div>
+
+                            </div>
+                            <div class="cart-element-info-wrapper-price d-none d-lg-block">
+                                <div class="cart-element-info-wrapper-price_oldprice">
+                                    200 руб.
+                                </div>
+                                <div class="cart-element-info-wrapper-price_curprice">
+                                    160 руб.
+                                </div>
+                            </div>
+                            <div class="cart-element-info-wrapper-amount">
 
                                 <div class="basket-item-block-amount">
                                     <span class="basket-item-amount-btn-minus" onclick="setQuantity(1417017, 1, 'down', false);"></span>
@@ -212,8 +337,7 @@
                                 </div>
                             </div>
                             <a href='#' class="cart-element-info-wrapper__delete">
-                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-none d-lg-block">
-                                <img src="./images/dist/icons/close_gray.svg" alt="delete" class="d-flex d-lg-none">
+                                <img src="./images/dist/icons/delete_gray.svg" alt="delete" class="d-lg-block">
                             </a>
                         </div>
                     </div>
@@ -226,28 +350,34 @@
 
         <div class="col-xl-3 cart-sticky">
             <div class="cart-panel">
+                <div class="cart-panel-top">
+                    <img src="./images/dist/icons/car_svg.svg" alt="Доставка" class="cart-panel-top__img">
+                    <div class="cart-panel-top__text">
+                        Заказы от 2 000 ₽ – доставляются 
+                        <span>в пределах МКАД БЕСПЛАТНО</span>
+                    </div>
+                </div>
                 <div class="cart-panel-info">
-                    <div class="cart-panel-info__item cart-panel-info__item_big mb-3">
-                        <div class="cart-panel-info__item_left">Ваш заказ:</div>
-                        <div class="cart-panel-info__item_right">6 товаров</div>
+                    <div class="cart-panel-info__title">
+                        Ваш заказ
                     </div>
                     <div class="cart-panel-info__item">
                         <div class="cart-panel-info__item_left">
-                            Стоимость:
+                            Товары – 5 шт. 
                         </div>
                         <div class="cart-panel-info__item_right">
-                            318 913 руб.
+                            1 850 470 ₽
                         </div>
                     </div>
                     <div class="cart-panel-info__item">
                         <div class="cart-panel-info__item_left">
-                            Скидка:
+                            Скидка на товары
                         </div>
-                        <div class="cart-panel-info__item_right">
-                            -40 руб.
+                        <div class="cart-panel-info__item_right red">
+                            - 20 860 ₽
                         </div>
                     </div>
-                    <div class="cart-panel-info__item cart-panel-info__item_big cart-panel-info__item_bold mt-4">
+                    <div class="cart-panel-info__item cart-panel-info__item_big cart-panel-info__item_bold cart-panel-info__item_result">
                         <div class="cart-panel-info__item_left">
                             Итого:
                         </div>
@@ -255,35 +385,29 @@
                             318 873 руб.
                         </div>
                     </div>
-                    <div class="cart-panel-info__item">
-                        <div class="cart-panel-info__item_left">
-                            В том числе НДС:
-                        </div>
-                        <div class="cart-panel-info__item_right">
-                            30,91 руб.
-                        </div>
-                    </div>
                 </div>
 
+                <!-- 
                 <div class="cart-panel-sber">
                     <div class="cart-panel-sber__text">Бонусы <img src="./images/dist/icons/spasibo_logo.jpg" alt="spasibo">,<br>начисленные к покупке: </div>
                     <div class="cart-panel-sber__value"><span>9 566</span> бонусов</div>
-                </div>
+                </div> 
+                -->
 
-                <div class="cart-panel__devider"></div>
 
                 <div class="cart-panel-promo">
                     <input type="text" class="cart-panel-promo__input" id="coupon" name="COUPON" placeholder="Введите промокод">
-                    <div class="promo-btn">
-                        <input class="cart-panel-promo__btn" type="button" value="Применить" onclick="enterCoupon()">
-                    </div>
+                    <input class="cart-panel-promo__btn" type="button" value="Применить" onclick="enterCoupon()">
                 </div>
 
                 <div class="cart-panel-btns">
-                    <a class="btn" href="#">Оформить заказ</a>
+                    <a class="btn btn_order" href="#">Оформить заказ</a>
                 </div>
 
             </div>
+
+            <a class='btn btn_sec' href="#">Купить в 1 клик</a>
+
         </div>
 
     </div>

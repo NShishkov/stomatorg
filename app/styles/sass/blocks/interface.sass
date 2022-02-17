@@ -134,6 +134,37 @@ ul.list
             margin-right: 20px
             &:last-child
                 margin-right: 0
+    &_arrows
+        li
+            padding-left: 23px
+            &::before
+                width: 14px
+                height: 10px
+                background-image: url('../images/dist/icons/arrows_list.svg')
+                background-color: transparent
+                background-size: contain
+                top: 4px
+                left: 0
+                border-radius: 0%
+                background-repeat: no-repeat
+                background-position: center
+                
+    &_box
+        li
+            padding-left: 23px
+            &::before
+                width: 13px
+                height: 18px
+                left: 0
+                top: 0
+                background-image: url('../images/dist/icons/box_icon.svg')
+                background-size: contain
+                background-color: transparent
+                border-radius: 0%
+                background-repeat: no-repeat
+                background-position: center
+
+
 
 ul.column_5
     display: block
