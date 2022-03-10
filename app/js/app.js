@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				runCallbacksOnInit: true,
 				breakpoints: {
 				  320: {
-					slidesPerView: 1,
+					slidesPerView: 1.2,
 					spaceBetween: 10
 				  },
 				  576: {
