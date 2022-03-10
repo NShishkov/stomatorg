@@ -107,7 +107,7 @@ span
     *:last-child
         margin-bottom: 0
 
-ul.list
+ul.list, .tabs-content ul, .news-detail__text ul
     list-style-type: none
     padding-left: 0
     li
@@ -127,6 +127,8 @@ ul.list
             border-radius: 50%
             top: 7px
             left: 7px
+    ul
+        padding-left: 30px
     &_line
         display: flex
         flex-wrap: wrap
@@ -552,7 +554,7 @@ ol
     p.big
         font-size: 13px
 
-    ul.list
+    ul.list, .tabs-content ul, .news-detail__text ul
         li
             font-size: 12px
 
@@ -595,6 +597,8 @@ ol
                 margin-bottom: 3px
                 &.active
                     border-radius: 4px
+        &-content
+            font-size: 12px
 
     .catalog
         &-sections
