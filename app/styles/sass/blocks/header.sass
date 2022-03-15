@@ -556,6 +556,25 @@
                     img
                         display: inline-block
                         margin-bottom: 3px
+                        height: 22px
+                        width: auto
+        &-botmenu__fav
+            position: relative
+            img:nth-child(2)
+                display: none
+            &__cnt
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-65%)
+                font-size: 9px
+                line-height: 1
+                color: #fff
+            &.active
+                img:nth-child(1)
+                    display: none
+                img:nth-child(2)
+                    display: inline-block
         &-main
             &__catalog
                 font-size: 0
