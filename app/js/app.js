@@ -765,9 +765,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).closest('.bx-filter-block').css("height",'auto')
 	});
 
-	$('.dropdown-toggle').click(function(){
+	$("body").on('click','.dropdown-toggle',function(){
 		$(this).toggleClass('open')
-	})
+	});
 	$(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".dropdown-toggle"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
@@ -776,8 +776,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-
-	$('.catalog-topfilter-show').click(function(){
+	$("body").on('click','.catalog-topfilter-show',function(){
 		$('.bx-filter').addClass('visible')
 		$('body').addClass('fixed');
 	});
