@@ -39,9 +39,9 @@
 }
 .bx-filter .bx-filter-parameters-box-title {
 	font-size: 15px;
-    line-height: 18px;
-    color: #222;
-    font-weight: 500;
+	line-height: 15px;
+	color: #222;
+	font-weight: 500;
 }
 @media (min-width: 992px) {
 	.bx-filter .bx-filter-section .col-md-4:nth-child(3n+1) {
@@ -56,11 +56,11 @@
 .bx-filter .bx-filter-parameters-box-title span {
 	color: #222;
 	border-bottom: 1px solid transparent;
-	cursor: pointer;
-    font-weight: 500;
+	cursor: auto;
+	font-weight: 500;
 }
 .bx-filter .bx-filter-parameters-box-title span:hover {
-	border-color: #039be5;
+	// border-color: #039be5;
 }
 .bx-filter .bx-filter-parameters-box.bx-active .bx-filter-parameters-box-title span {
 	/*color: #95a1a8;*/
@@ -98,7 +98,7 @@
 }
 .bx-filter-parameters-box-container {
 	padding-bottom: 0;
-    max-height: 320px;
+    max-height: 180px;
     overflow: auto;
 }
 
@@ -814,7 +814,7 @@ COLOR
     }
 
     .bx-filter-parameters-box-container{
-        max-height: 250px;
+        max-height: 200px;
     }
             
 

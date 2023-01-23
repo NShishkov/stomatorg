@@ -110,10 +110,10 @@ span
 ul.list, .tabs-content ul, .news-detail__text ul
     list-style-type: none
     padding-left: 0
-    li
+    >li
         padding-left: 23px
         position: relative
-        font-size: 14px
+        font-size: 15px
         line-height: 140%
         color: #000
         margin-bottom: 5px
@@ -137,7 +137,7 @@ ul.list, .tabs-content ul, .news-detail__text ul
             &:last-child
                 margin-right: 0
     &_arrows
-        li
+        >li
             padding-left: 23px
             &::before
                 width: 14px
@@ -152,7 +152,7 @@ ul.list, .tabs-content ul, .news-detail__text ul
                 background-position: center
                 
     &_box
-        li
+        >li
             padding-left: 23px
             &::before
                 width: 13px
@@ -350,6 +350,8 @@ ol
     &-banner
         img
             max-width: 100%
+            width: 100%
+            height: auto
 
 
 
@@ -518,6 +520,8 @@ ol
     &__item
         img
             max-width: 100%
+            width: 100%
+            height: auto
             image-rendering: -webkit-optimize-contrast
 
 @media (max-width: 1639.98px)
