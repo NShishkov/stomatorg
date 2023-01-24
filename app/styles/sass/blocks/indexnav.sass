@@ -1,5 +1,36 @@
 $animTime: .4s
+
     
+.indexnavslider
+    overflow: hidden
+    position: relative
+    &-item
+        border-radius: 7px
+        padding: 15px 5px
+        background-color: #EFF2F6
+        max-width: 240px
+        transition: background-color .3s
+        display: inline-block
+        height: auto
+        overflow: hidden
+        &__img
+            max-width: 100%
+            transition: .5s transform
+        &__title   
+            text-align: center
+            width: 100%
+            display: block
+            transition: color .3s
+            color: #222
+            font-weight: 500
+        &:hover
+            background-color: #ecedef
+            .indexnavslider-item__img
+                transform: scale(1.05)
+    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+        opacity: 0
+
+
 .indexnav
     margin-bottom: 90px
     &__wrapper
@@ -98,6 +129,28 @@ $animTime: .4s
             z-index: -1
 
 
+.indexnavgrid
+    display: flex
+    flex-wrap: wrap 
+    justify-content: space-between
+    &-item
+        width: calc(33.33% - 13px)
+        margin-bottom: 15px
+        justify-content: center
+        &__img
+            background-color: #EFF2F6
+            border-radius: 7px
+            margin-bottom: 4px
+            img
+                max-width: 100%
+        &__title
+            display: block
+            text-align: center
+            font-size: 12px
+            line-height: 1.2
+            font-weight: 500
+
+
 @media (max-width: 1640px)
     .indexnav-card
         min-height: 200px
@@ -112,6 +165,10 @@ $animTime: .4s
 
         
 @media (max-width: 1299.98px)
+    .indexnavslider
+        &-item
+            max-width: 200px
+    
     .indexnav-card
         min-height: 150px
         padding-top: 15px
@@ -156,3 +213,16 @@ $animTime: .4s
             width: calc(50% - 2.5px)
             &__title
                 font-size: 12px
+
+@media (max-width: 460px)
+    .indexnavgrid
+        &-item
+            width: calc(33.33% - 4px)
+            &__title
+                font-size: 11px
+
+@media (max-width: 375px)
+    .indexnavgrid
+        &-item
+            width: calc(50% - 3px)
+            margin-bottom: 12px

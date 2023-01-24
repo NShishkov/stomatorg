@@ -267,6 +267,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// PRODUCT DAY SIDEBAR SLIDER END
+
+	// INDEX SLIDER
+	var indexSlider = new Swiper(".indexnavslider", {
+		slidesPerView: "auto",
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.swiper-button-next__indexnavslider',
+			prevEl: '.swiper-button-prev__indexnavslider',
+		},
+
+		breakpoints: {
+
+			1300: {
+				spaceBetween: 20,
+			},
+
+		}
+	});
+	// INDEX SLIDER END
  
 
 
