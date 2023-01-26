@@ -4,6 +4,16 @@
     padding-bottom: 40px
     color: #000
     font-size: 15px
+    &-btns
+        margin-bottom: 25px
+        &__item.btn
+            height: 40px
+            display: inline-flex
+            align-items: center
+            font-size: 12px
+            &:first-child
+                margin-right: 6px
+
     &_left
         padding-left: 50px
     &-menu
@@ -254,3 +264,12 @@
             color: #6B6B6B
             font-size: 12px
             line-height: 125%
+
+@media (max-width: 576px)
+    .newfooter
+        &-btns
+            display: flex
+            &__item.btn
+                width: calc(50% - 3px)
+                justify-content: center
+            
